@@ -8,22 +8,28 @@
         "start": "next start",
         "lint": "next lint",
         "format": "npx prettier --write .",
-        "format-check": "npx prettier --check ."
+        "format-check": "npx prettier --check .",
+        "tailwind": "tailwindcss -i ./app/globals.css -o ./app/coffee-diary.css --watch"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.5.1",
+        "@fortawesome/free-brands-svg-icons": "^6.5.1",
+        "@fortawesome/free-regular-svg-icons": "^6.5.1",
+        "@fortawesome/free-solid-svg-icons": "^6.5.1",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "next": "14.0.3",
         "react": "^18",
-        "react-dom": "^18",
-        "next": "14.0.3"
+        "react-dom": "^18"
     },
     "devDependencies": {
-        "typescript": "^5",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "autoprefixer": "^10.0.1",
+        "eslint": "^8",
+        "eslint-config-next": "14.0.3",
         "postcss": "^8",
         "tailwindcss": "^3.3.0",
-        "eslint": "^8",
-        "eslint-config-next": "14.0.3"
+        "typescript": "^5"
     }
 }

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
