@@ -54,11 +54,11 @@ export default function coffeeDiarySvg(
     }
 
     const svgContent = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 560" width="340" height="540" class="rounded-2xl">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 500" width="320" height="500" class="rounded-2xl">
         <style>
             ${css}
         </style>
-        <foreignObject x="0" y="0" width="320" height="500" class="shadow-xl rounded-2xl">
+        <foreignObject x="0" y="0" width="320" height="500" class="rounded-2xl">
             <div xmlns="http://www.w3.org/1999/xhtml" class="w-full h-full flex justify-center items-center bg-coffee-white">
                 <div class="w-[95%] h-[95%] border-coffee-black border-4 rounded-xl py-4">
                     <div class="w-full flex justify-center pb-3">
