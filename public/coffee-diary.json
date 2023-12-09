@@ -1,0 +1,42 @@
+{
+    "2023-12-8": {
+        "bean-type": "GEISHA",
+        "origin": "JAPAN",
+        "flavor": "This exquisite Geisha coffee offers a delicate balance of floral aromas and fruity notes, complemented by a smooth, velvety texture and a lingering, sophisticated finish."
+    },
+    "2023-12-7": {
+        "bean-type": "ARABICA",
+        "origin": "COLOMBIA",
+        "flavor": "A harmonious blend of nutty flavors with a touch of caramel sweetness, balanced by a mild fruity acidity."
+    },
+    "2023-12-6": {
+        "bean-type": "ROBUSTA",
+        "origin": "INDONESIA",
+        "flavor": "Earthy and spicy, with a robust body and a lingering aftertaste of dark chocolate."
+    },
+    "2023-12-5": {
+        "bean-type": "ARABICA",
+        "origin": "GUATEMALA",
+        "flavor": "Rich and full-bodied with notes of chocolate and a smooth, velvety finish."
+    },
+    "2023-12-4": {
+        "bean-type": "ARABICA",
+        "origin": "KENYA",
+        "flavor": "Vibrant and aromatic, featuring a lively interplay of berry-like flavors and a refreshing acidity."
+    },
+    "2023-12-3": {
+        "bean-type": "ROBUSTA",
+        "origin": "UGANDA",
+        "flavor": "Bold and intense, with a heavy body and a pronounced earthy character."
+    },
+    "2023-12-2": {
+        "bean-type": "ARABICA",
+        "origin": "ETHIOPIA",
+        "flavor": "This coffee offers a delicate dance of floral aromatics, bright citrus notes, and a graceful undertone of honeyed chocolate."
+    },
+    "2023-12-1": {
+        "bean-type": "ROBUSTA",
+        "origin": "VIETNAM",
+        "flavor": "Coffee tantalizes the palate with a rich symphony of bold bitterness, subtle acidity, and a hint of roasted sweetness."
+    }
+}
