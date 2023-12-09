@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import fs from "fs";
+import path from 'path';
 
 type CoffeeData = {
     "bean-type": string;
@@ -12,8 +13,9 @@ type CoffeeLog = {
     [date: string]: CoffeeData;
 };
 
-function getCssContent() {
-    const cssContent = fs.readFileSync("app/coffee-diary.css", "utf8");
+function getCoffeeDiaryCss() {
+    const filePath = path.join(process.cwd(), 'app', 'coffee-diary.css');
+    const cssContent = fs.readFileSync(filePath, 'utf8');
     return cssContent;
 }
 
@@ -32,7 +34,7 @@ export default function coffeeDiarySvg(
     const { name } = req.query;
     const githubName = name;
 
-    const css = getCssContent();
+    const css = getCoffeeDiaryCss();
     const coffeeDiaryJson: CoffeeLog | null = getCoffeeDiaryJson();
 
     let beanType = "";
