@@ -20,10 +20,8 @@ function getCoffeeDiaryCss() {
 }
 
 function getCoffeeDiaryJson() {
-    const coffeeDiaryJson = fs.readFileSync(
-        "public/coffee-diary.json",
-        "utf-8",
-    );
+    const filePath = path.join(process.cwd(), 'public', 'coffee-diary.json');
+    const coffeeDiaryJson = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(coffeeDiaryJson);
 }
 
