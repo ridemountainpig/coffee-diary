@@ -1,0 +1,17 @@
+{
+    "2023-12-25": {
+        "bean-type": "GEISHA",
+        "origin": "JAPAN",
+        "flavor": "This exquisite Geisha coffee offers a delicate balance of floral aromas and fruity notes, complemented by a smooth, velvety texture and a lingering, sophisticated finish."
+    },
+    "2023-12-24": {
+        "bean-type": "ROBUSTA",
+        "origin": "VIETNAM",
+        "flavor": "Characterized by its strong, robust flavor profile, this coffee boasts a deep, earthy aroma with a full-bodied texture and a notably bitter edge, often accompanied by a subtle hint of chocolate."
+    },
+    "year-month-day": {
+        "bean-type": "bean type",
+        "origin": "coffee origin",
+        "flavor": "coffee flavor you tasted"
+    }
+}
