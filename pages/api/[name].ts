@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import fs from "fs";
-import path from 'path';
+import path from "path";
 
 type CoffeeData = {
     "bean-type": string;
@@ -14,14 +14,14 @@ type CoffeeLog = {
 };
 
 function getCoffeeDiaryCss() {
-    const filePath = path.join(process.cwd(), 'app', 'coffee-diary.css');
-    const cssContent = fs.readFileSync(filePath, 'utf8');
+    const filePath = path.join(process.cwd(), "app", "coffee-diary.css");
+    const cssContent = fs.readFileSync(filePath, "utf8");
     return cssContent;
 }
 
 function getCoffeeDiaryJson() {
-    const filePath = path.join(process.cwd(), 'public', 'coffee-diary.json');
-    const coffeeDiaryJson = fs.readFileSync(filePath, 'utf8');
+    const filePath = path.join(process.cwd(), "public", "coffee-diary.json");
+    const coffeeDiaryJson = fs.readFileSync(filePath, "utf8");
     return JSON.parse(coffeeDiaryJson);
 }
 
@@ -54,11 +54,11 @@ export default function coffeeDiarySvg(
     }
 
     const svgContent = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 500" width="320" height="500" class="rounded-2xl">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 510" width="320" height="510" class="rounded-2xl">
         <style>
             ${css}
         </style>
-        <foreignObject x="0" y="0" width="320" height="500" class="rounded-2xl">
+        <foreignObject x="0" y="0" width="320" height="510" class="rounded-2xl">
             <div xmlns="http://www.w3.org/1999/xhtml" class="w-full h-full flex justify-center items-center bg-coffee-white">
                 <div class="w-[95%] h-[95%] border-coffee-black border-4 rounded-xl py-4">
                     <div class="w-full flex justify-center pb-3">
@@ -71,7 +71,7 @@ export default function coffeeDiarySvg(
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
                     <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest px-4">${
                         continueDays == 0
-                            ? "first day of coffee diary"
+                            ? "Day One: Journey of Java"
                             : continueDays + " day"
                     }</div>
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
@@ -82,47 +82,74 @@ export default function coffeeDiarySvg(
                     </div>
                     </div>
 
-                    <div class="text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full text-center">By ${githubName}</div>
+                    ${
+                        continueDays == 0
+                            ? `
+                        <div class="mt-4 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
+                        <div class="mt-4 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
+                            Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.
+                        </div>
+                        <div class="mt-7 px-6">
+                            <div class="grid grid-cols-4 text-coffee-brown">
+                                <div class="col-span-1 flex justify-center">
+                                    <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b59c85"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <desc></desc> <g fill="none" fill-rule="evenodd" id="Coffee-Bag" stroke="none" stroke-width="1"> <g id="Group" transform="translate(6.000000, 4.000000)"> <path d="M11.6571001,3 L0.342899851,3 L-1,6.10591191 L-1,17 L13,17 L13,6.10591191 L11.6571001,3 Z" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2"></path> <g fill="#b59c85" id="Group-2" transform="translate(2.000000, 9.000000)"> <ellipse cx="5.5" cy="2" id="Oval" rx="1.5" ry="1" transform="translate(5.500000, 2.000000) rotate(-45.000000) translate(-5.500000, -2.000000) "></ellipse> <ellipse cx="2.5" cy="2" id="Oval-Copy" rx="1.5" ry="1" transform="translate(2.500000, 2.000000) rotate(-45.000000) translate(-2.500000, -2.000000) "></ellipse> </g> <rect height="4" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="0" y="-1"></rect> <rect height="4" id="Rectangle-Copy" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="8" y="-1"></rect> </g> <rect height="7" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="10" y="3"></rect> </g> </g></svg>
+                                </div>
+                                <div class="col-span-1 flex justify-center">
+                                    <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b59c85"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <desc></desc> <g fill="none" fill-rule="evenodd" id="Coffee-Grinder" stroke="none" stroke-linejoin="round" stroke-width="1"> <g id="Group" stroke="#b59c85" stroke-width="2" transform="translate(4.000000, 4.000000)"> <rect height="9" id="Rectangle" width="10" x="2" y="7"></rect> <rect height="3" id="Rectangle" width="4" x="5" y="10"></rect> <polygon id="Rectangle" points="4 2 10 2 11 6 3 6" transform="translate(7.000000, 4.000000) scale(1, -1) translate(-7.000000, -4.000000) "></polygon> <polyline id="Path-23" points="7 0 14.8953772 0 14.8953772 3 16 3" stroke-linecap="round"></polyline> <rect height="1" id="Rectangle" transform="translate(7.000000, 6.500000) scale(1, -1) translate(-7.000000, -6.500000) " width="14" x="0" y="6"></rect> </g> </g> </g></svg>
+                                </div>
+                                <div class="col-span-1 flex justify-center">
+                                    <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <desc></desc> <g fill="none" fill-rule="evenodd" id="Coffee-Mug" stroke="none" stroke-width="1"> <g id="Group" stroke="#b59c85" stroke-width="2" transform="translate(4.000000, 4.000000)"> <path d="M11,5 L1,5 C0.44771525,5 -0.0522847498,5.22385763 -0.414213562,5.58578644 C-0.776142375,5.94771525 -1,6.44771525 -1,7 L-1,11 C-1,12.6568542 -0.328427125,14.1568542 0.757359313,15.2426407 C1.84314575,16.3284271 3.34314575,17 5,17 L7,17 C8.65685425,17 10.1568542,16.3284271 11.2426407,15.2426407 C12.3284271,14.1568542 13,12.6568542 13,11 L13,7 C13,6.44771525 12.7761424,5.94771525 12.4142136,5.58578644 C12.0522847,5.22385763 11.5522847,5 11,5 Z" id="Rectangle"></path> <path d="M17,7 L13,7 L13,9 C13,9.55228475 13.2238576,10.0522847 13.5857864,10.4142136 C13.9477153,10.7761424 14.4477153,11 15,11 C15.5522847,11 16.0522847,10.7761424 16.4142136,10.4142136 C16.7761424,10.0522847 17,9.55228475 17,9 L17,7 Z" id="Rectangle" transform="translate(15.000000, 9.000000) rotate(-90.000000) translate(-15.000000, -9.000000) "></path> <line id="Path-5" stroke-linecap="round" x1="2" x2="2" y1="2" y2="0"></line> <line id="Path-5-Copy" stroke-linecap="round" x1="10" x2="10" y1="2" y2="0"></line> <line id="Path-5-Copy-2" stroke-linecap="round" x1="6" x2="6" y1="2" y2="0"></line> </g> </g> </g></svg>
+                                </div>
+                                <div class="col-span-1 flex justify-center">
+                                    <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <desc></desc> <g fill="none" fill-rule="evenodd" id="Gooseneck-Kettle" stroke="none" stroke-linejoin="round" stroke-width="1"> <g id="Group" stroke="#b59c85" stroke-width="2" transform="translate(4.000000, 4.000000)"> <polygon id="Rectangle" points="6.14285714 4 11.8571429 4 13 16 5 16"></polygon> <polyline id="Path" points="13 7 16 7 16 13" stroke-linecap="round"></polyline> <path d="M5,12.0335631 C2.59464685,12.0335631 1.39197027,10.6471858 1.39197027,7.87443131 C1.39197027,5.10167679 0.927980181,3.83015239 0,4.05985811" id="Path-22" stroke-linecap="round"></path> <line id="Path-15" stroke-linecap="round" x1="8" x2="10" y1="1" y2="1"></line> </g> </g> </g></svg>
+                                </div>
+                            </div>
+                        </div>
+                        `
+                            : `
+                        <div class="text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full text-center">By ${githubName}</div>
 
-                    <div class="grid grid-cols-8 mt-2 px-4">
-                        <div class="col-span-4 h-8 flex items-center border-r-3 border-t-3 border-coffee-black">
-                            <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
-                                BEAN TYPE
-                            </span>
-                        </div>
-                        <div class="col-span-4 h-8 flex items-center border-t-3 border-coffee-black">
-                            <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
-                                ${beanType}
-                            </span>
-                        </div>
-                        <div class="col-span-3 h-8 flex items-center border-r-3 border-t-3 border-coffee-black">
-                            <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
-                                ORIGIN
-                            </span>
-                        </div>
-                        <div class="col-span-5 h-8 flex items-center border-t-3 border-coffee-black">
-                            <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
-                                ${origin}
-                            </span>
-                        </div>
-                        <div class="col-span-8 h-2 flex items-center border-t-3 border-coffee-black"></div>
-                        <div class="col-span-8 h-8 flex items-center border-t-3 border-coffee-black">
-                            <div class="w-full flex justify-center items-center gap-x-2">
-                                <svg fill="#021928" width="20px" height="20px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-1152,-256)"> <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"></rect> <g id="Icons1" serif:id="Icons"> <g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g> <g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g> <g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g> <g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g> <g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g> <g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g> <g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g> <g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g> <g id="toggle-off"> </g> <g id="shredder"> </g> <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g> <g id="react"> </g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g> <g id="user"> </g> <g id="coffee-bean"> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)"> <g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g> </g> <g id="coffee-bean-filled" transform="matrix(0.866025,0.5,-0.5,0.866025,717.879,-387.292)"> <g transform="matrix(1,0,0,1,0,-0.699553)"> <path d="M737.673,328.231C738.494,328.056 739.334,328.427 739.757,329.152C739.955,329.463 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.079,358.559 736.492,366.083 738.435,371.679C738.697,372.426 738.482,373.258 737.89,373.784C737.298,374.31 736.447,374.426 735.735,374.077C730.192,371.375 722.028,365.058 722.021,352C722.015,340.226 728.812,330.279 737.673,328.231Z"></path> </g> <g transform="matrix(-1,0,0,-1,1483.03,703.293)"> <path d="M737.609,328.246C738.465,328.06 739.344,328.446 739.785,329.203C739.97,329.49 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.1,358.507 736.503,365.948 738.383,371.527C738.646,372.304 738.415,373.164 737.796,373.703C737.177,374.243 736.294,374.356 735.56,373.989C730.02,371.241 722.028,364.92 722.021,352C722.016,340.255 728.779,330.328 737.609,328.246Z"></path> </g> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)"> <g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g> </g> <g id="clipboard"> </g> <g transform="matrix(1,0,0,1,128.011,1.35415)"> <g id="clipboard-paste"> </g> </g> <g id="clipboard-copy"> </g> <g id="Layer1"> </g> </g> </g> </g></svg>
-                                <span class="text-coffee-black text-sm font-bold font-nunito text-center">
-                                    FLAVOR
-                                </span>
-                                <svg fill="#021928" width="20px" height="20px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-1152,-256)"> <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"></rect> <g id="Icons1" serif:id="Icons"> <g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g> <g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g> <g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g> <g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g> <g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g> <g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g> <g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g> <g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g> <g id="toggle-off"> </g> <g id="shredder"> </g> <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g> <g id="react"> </g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g> <g id="user"> </g> <g id="coffee-bean"> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)"> <g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g> </g> <g id="coffee-bean-filled" transform="matrix(0.866025,0.5,-0.5,0.866025,717.879,-387.292)"> <g transform="matrix(1,0,0,1,0,-0.699553)"> <path d="M737.673,328.231C738.494,328.056 739.334,328.427 739.757,329.152C739.955,329.463 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.079,358.559 736.492,366.083 738.435,371.679C738.697,372.426 738.482,373.258 737.89,373.784C737.298,374.31 736.447,374.426 735.735,374.077C730.192,371.375 722.028,365.058 722.021,352C722.015,340.226 728.812,330.279 737.673,328.231Z"></path> </g> <g transform="matrix(-1,0,0,-1,1483.03,703.293)"> <path d="M737.609,328.246C738.465,328.06 739.344,328.446 739.785,329.203C739.97,329.49 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.1,358.507 736.503,365.948 738.383,371.527C738.646,372.304 738.415,373.164 737.796,373.703C737.177,374.243 736.294,374.356 735.56,373.989C730.02,371.241 722.028,364.92 722.021,352C722.016,340.255 728.779,330.328 737.609,328.246Z"></path> </g> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)"> <g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g> </g> <g id="clipboard"> </g> <g transform="matrix(1,0,0,1,128.011,1.35415)"> <g id="clipboard-paste"> </g> </g> <g id="clipboard-copy"> </g> <g id="Layer1"> </g> </g> </g> </g></svg>
-                            </div>
-                        </div>
-                        <div class="col-span-8 py-1 flex items-center border-t-3 border-coffee-black">
-                            <div class="w-full h-16 flex justify-center items-center">
-                                <span class="text-coffee-black text-xs font-bold font-nunito text-center line-clamp-4">
-                                    ${flavor}
+                        <div class="grid grid-cols-8 mt-2 px-4">
+                            <div class="col-span-4 h-8 flex items-center border-r-3 border-t-3 border-coffee-black">
+                                <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
+                                    BEAN TYPE
                                 </span>
                             </div>
+                            <div class="col-span-4 h-8 flex items-center border-t-3 border-coffee-black">
+                                <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
+                                    ${beanType}
+                                </span>
+                            </div>
+                            <div class="col-span-3 h-8 flex items-center border-r-3 border-t-3 border-coffee-black">
+                                <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
+                                    ORIGIN
+                                </span>
+                            </div>
+                            <div class="col-span-5 h-8 flex items-center border-t-3 border-coffee-black">
+                                <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
+                                    ${origin}
+                                </span>
+                            </div>
+                            <div class="col-span-8 h-2 flex items-center border-t-3 border-coffee-black"></div>
+                            <div class="col-span-8 h-8 flex items-center border-t-3 border-coffee-black">
+                                <div class="w-full flex justify-center items-center gap-x-2">
+                                    <svg fill="#021928" width="20px" height="20px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-1152,-256)"> <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"></rect> <g id="Icons1" serif:id="Icons"> <g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g> <g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g> <g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g> <g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g> <g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g> <g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g> <g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g> <g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g> <g id="toggle-off"> </g> <g id="shredder"> </g> <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g> <g id="react"> </g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g> <g id="user"> </g> <g id="coffee-bean"> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)"> <g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g> </g> <g id="coffee-bean-filled" transform="matrix(0.866025,0.5,-0.5,0.866025,717.879,-387.292)"> <g transform="matrix(1,0,0,1,0,-0.699553)"> <path d="M737.673,328.231C738.494,328.056 739.334,328.427 739.757,329.152C739.955,329.463 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.079,358.559 736.492,366.083 738.435,371.679C738.697,372.426 738.482,373.258 737.89,373.784C737.298,374.31 736.447,374.426 735.735,374.077C730.192,371.375 722.028,365.058 722.021,352C722.015,340.226 728.812,330.279 737.673,328.231Z"></path> </g> <g transform="matrix(-1,0,0,-1,1483.03,703.293)"> <path d="M737.609,328.246C738.465,328.06 739.344,328.446 739.785,329.203C739.97,329.49 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.1,358.507 736.503,365.948 738.383,371.527C738.646,372.304 738.415,373.164 737.796,373.703C737.177,374.243 736.294,374.356 735.56,373.989C730.02,371.241 722.028,364.92 722.021,352C722.016,340.255 728.779,330.328 737.609,328.246Z"></path> </g> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)"> <g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g> </g> <g id="clipboard"> </g> <g transform="matrix(1,0,0,1,128.011,1.35415)"> <g id="clipboard-paste"> </g> </g> <g id="clipboard-copy"> </g> <g id="Layer1"> </g> </g> </g> </g></svg>
+                                    <span class="text-coffee-black text-sm font-bold font-nunito text-center">
+                                        FLAVOR
+                                    </span>
+                                    <svg fill="#021928" width="20px" height="20px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-1152,-256)"> <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"></rect> <g id="Icons1" serif:id="Icons"> <g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g> <g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g> <g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g> <g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g> <g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g> <g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g> <g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g> <g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g> <g id="toggle-off"> </g> <g id="shredder"> </g> <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g> <g id="react"> </g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g> <g id="user"> </g> <g id="coffee-bean"> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)"> <g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g> </g> <g id="coffee-bean-filled" transform="matrix(0.866025,0.5,-0.5,0.866025,717.879,-387.292)"> <g transform="matrix(1,0,0,1,0,-0.699553)"> <path d="M737.673,328.231C738.494,328.056 739.334,328.427 739.757,329.152C739.955,329.463 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.079,358.559 736.492,366.083 738.435,371.679C738.697,372.426 738.482,373.258 737.89,373.784C737.298,374.31 736.447,374.426 735.735,374.077C730.192,371.375 722.028,365.058 722.021,352C722.015,340.226 728.812,330.279 737.673,328.231Z"></path> </g> <g transform="matrix(-1,0,0,-1,1483.03,703.293)"> <path d="M737.609,328.246C738.465,328.06 739.344,328.446 739.785,329.203C739.97,329.49 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.1,358.507 736.503,365.948 738.383,371.527C738.646,372.304 738.415,373.164 737.796,373.703C737.177,374.243 736.294,374.356 735.56,373.989C730.02,371.241 722.028,364.92 722.021,352C722.016,340.255 728.779,330.328 737.609,328.246Z"></path> </g> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)"> <g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g> </g> <g id="clipboard"> </g> <g transform="matrix(1,0,0,1,128.011,1.35415)"> <g id="clipboard-paste"> </g> </g> <g id="clipboard-copy"> </g> <g id="Layer1"> </g> </g> </g> </g></svg>
+                                </div>
+                            </div>
+                            <div class="col-span-8 py-2 flex items-center border-t-3 border-coffee-black">
+                                <div class="w-full h-16 flex justify-center items-center">
+                                    <span class="text-coffee-black text-xs font-bold font-nunito text-center line-clamp-4">
+                                        ${flavor}
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        `
+                    }
                 </div>
             </div>
         </foreignObject>

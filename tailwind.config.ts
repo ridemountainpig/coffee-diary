@@ -11,6 +11,7 @@ const config: Config = {
             colors: {
                 "coffee-white": "#fefdf5",
                 "coffee-black": "#021928",
+                "coffee-brown": "#b59c85",
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
