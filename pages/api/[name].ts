@@ -19,21 +19,42 @@ function getCoffeeDiaryCss() {
     return cssContent;
 }
 
-function getCoffeeDiaryJson() {
-    const filePath = path.join(process.cwd(), "public", "coffee-diary.json");
-    const coffeeDiaryJson = fs.readFileSync(filePath, "utf8");
-    return JSON.parse(coffeeDiaryJson);
+async function getCoffeeDiaryJson(githubName: string) {
+    try {
+        const response = await fetch(
+            `https://raw.githubusercontent.com/${githubName}/${githubName}/main/coffee-diary.json`,
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                "Failed to fetch coffee diary json, github name not found",
+            );
+        }
+
+        const coffeeDiaryJson = await response.json();
+        return coffeeDiaryJson;
+    } catch (error) {
+        console.log("Failed to fetch coffee diary json, github name not found");
+        return null;
+    }
 }
 
-export default function coffeeDiarySvg(
+export default async function coffeeDiarySvg(
     req: NextApiRequest,
     res: NextApiResponse,
 ) {
     const { name } = req.query;
-    const githubName = name;
+    let githubName = "";
+
+    if (typeof name === "string") {
+        githubName = name;
+    } else if (Array.isArray(name)) {
+        githubName = name[0];
+    }
 
     const css = getCoffeeDiaryCss();
-    const coffeeDiaryJson: CoffeeLog | null = getCoffeeDiaryJson();
+    const coffeeDiaryJson: CoffeeLog | null =
+        await getCoffeeDiaryJson(githubName);
 
     let beanType = "";
     let origin = "";
