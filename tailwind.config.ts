@@ -12,6 +12,8 @@ const config: Config = {
                 "coffee-white": "#fefdf5",
                 "coffee-black": "#021928",
                 "coffee-brown": "#b59c85",
+                "coffee-alabaster": "#ece5d9",
+                "coffee-icon": "#faf1e4",
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -32,6 +34,10 @@ const config: Config = {
             borderWidth: {
                 "3": "3px",
             },
+        },
+        fontFamily: {
+            pacifico: ["var(--font-pacifico)"],
+            kodchasan: ["var(--font-kodchasan)"],
         },
     },
     plugins: [require("@tailwindcss/line-clamp")],
