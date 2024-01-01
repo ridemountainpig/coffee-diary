@@ -23,6 +23,9 @@ dependencies:
     "@tailwindcss/line-clamp":
         specifier: ^0.4.4
         version: 0.4.4(tailwindcss@3.3.5)
+    framer-motion:
+        specifier: ^10.16.16
+        version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
     next:
         specifier: 14.0.3
         version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
@@ -87,6 +90,25 @@ packages:
         dependencies:
             regenerator-runtime: 0.14.0
         dev: true
+
+    /@emotion/is-prop-valid@0.8.8:
+        resolution:
+            {
+                integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==,
+            }
+        requiresBuild: true
+        dependencies:
+            "@emotion/memoize": 0.7.4
+        dev: false
+        optional: true
+
+    /@emotion/memoize@0.7.4:
+        resolution:
+            {
+                integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==,
+            }
+        dev: false
+        optional: true
 
     /@eslint-community/eslint-utils@4.4.0(eslint@8.55.0):
         resolution:
@@ -1704,6 +1726,27 @@ packages:
                 integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==,
             }
         dev: true
+
+    /framer-motion@10.16.16(react-dom@18.2.0)(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-je6j91rd7NmUX7L1XHouwJ4v3R+SO4umso2LUcgOct3rHZ0PajZ80ETYZTajzEXEl9DlKyzjyt4AvGQ+lrebOw==,
+            }
+        peerDependencies:
+            react: ^18.0.0
+            react-dom: ^18.0.0
+        peerDependenciesMeta:
+            react:
+                optional: true
+            react-dom:
+                optional: true
+        dependencies:
+            react: 18.2.0
+            react-dom: 18.2.0(react@18.2.0)
+            tslib: 2.6.2
+        optionalDependencies:
+            "@emotion/is-prop-valid": 0.8.8
+        dev: false
 
     /fs.realpath@1.0.0:
         resolution:
