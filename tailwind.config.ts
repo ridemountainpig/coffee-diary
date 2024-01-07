@@ -42,6 +42,8 @@ const config: Config = {
             fontSize: {
                 "2xs": ".65rem",
                 "3xs": ".5rem",
+                "6.5xl": "4.125rem",
+                "7xl": "5rem",
             },
             borderWidth: {
                 "3": "3px",
