@@ -20,21 +20,21 @@ export function Footer() {
             </div>
             <div className="bg-coffee-brown h-fit flex justify-between text-serenade-800">
                 <a
-                    className="md:m-4"
+                    className="m-4"
                     href="https://github.com/ridemountainpig/coffee-diary"
                     title="coffee diary"
                 >
-                    <div className="text-base font-kodchasan font-black tracking-widest px-3 py-2 bg-serenade-500 rounded-xl">
+                    <div className="text-xs font-kodchasan font-black tracking-widest px-3 py-2 bg-serenade-500 rounded-xl">
                         star project
                     </div>
                 </a>
                 <a
-                    className="md:m-4"
+                    className="m-4"
                     href="https://github.com/ridemountainpig"
                     title="coffee diary github"
                     target="_blank"
                 >
-                    <div className="text-base font-kodchasan font-black tracking-widest px-3 py-2 bg-serenade-500 rounded-xl">
+                    <div className="text-xs font-kodchasan font-black tracking-widest px-3 py-2 bg-serenade-500 rounded-xl">
                         power by ridemountainpig
                     </div>
                 </a>

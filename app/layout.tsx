@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { Rwdot } from "rwdot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,6 +55,10 @@ export default function RootLayout({
             <body
                 className={`${pacifico.variable} ${kodchasan.variable} ${tilt_neon.variable} ${capriola.variable}`}
             >
+                <Rwdot
+                    show={process.env.RWDOT_ENV === "development"}
+                    position="bottom-right"
+                />
                 {children}
             </body>
         </html>
