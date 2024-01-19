@@ -9,7 +9,7 @@ export function Diary() {
     return (
         <>
             <motion.div
-                className="bg-coffee-alabaster mx-10 sm:mx-20 lg:mx-30 h-fit lg:h-[38rem] rounded-3xl px-3 pt-3 md:px-6 md:pt-6 relative"
+                className="bg-coffee-alabaster mx-5 sm:mx-20 lg:mx-30 h-fit lg:h-[38rem] rounded-3xl px-3 pt-3 md:px-6 md:pt-6 relative"
                 initial={{ y: 200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 1.2 }}
