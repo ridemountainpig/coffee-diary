@@ -1,12 +1,14 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { AreaContent } from "@/components/area-content";
 import { AreaTitle } from "@/components/area-title";
-import { CoffeeDiary } from "@/components/homepage/coffee-diary";
-import { FileJson2 } from "lucide-react";
+import { CoffeeDiary } from "@/components/coffee-diary";
+import { ArrowRightCircle, FileJson2, PencilLine } from "lucide-react";
 import { Highlight } from "@/components/highlight";
 import { HighlightWithClick } from "@/components/highlight-with-click";
+import { getCoffeeDiaryJson } from "@/lib/coffee-diary";
 
 export function HowToUse() {
     const today = new Date();
@@ -50,6 +52,32 @@ export function HowToUse() {
     }
 `;
 
+    const [githubName, setGithubName] = useState("");
+
+    const handleGithubNameChange = (
+        event: React.ChangeEvent<HTMLInputElement>,
+    ) => {
+        setGithubName(event.target.value);
+    };
+
+    const coffeeDiaryUrlBase = "https://coffee-diary.com/api/";
+    const [coffeeDiaryUrl, setCoffeeDiaryUrl] = useState(
+        coffeeDiaryUrlBase + "coffeeDiarySvg",
+    );
+    const [coffeeDiaryState, setCoffeeDiaryState] = useState(false);
+
+    const handleGithubNameBtnClick = async () => {
+        const response = await getCoffeeDiaryJson(githubName);
+        console.log(response);
+        if (response == null) {
+            setCoffeeDiaryUrl(coffeeDiaryUrlBase + "coffeeDiarySvg");
+            setCoffeeDiaryState(true);
+            return;
+        }
+        setCoffeeDiaryUrl(coffeeDiaryUrlBase + githubName);
+        setCoffeeDiaryState(false);
+    };
+
     return (
         <>
             <motion.div
@@ -91,10 +119,10 @@ export function HowToUse() {
                 <div className="2xl:mx-52 lg:mx-30 mx-5 sm:mx-20 h-fit grid grid-cols-2 gap-x-10 pb-10">
                     <div className="col-span-2 xl:col-span-1 h-full">
                         <div className="bg-serenade-500 rounded-xl p-2 sm:p-4 2xl:p-10">
-                            <pre className="text-lg font-tilt-neon font-black text-serenade-800 tracking-widest py-4 hidden sm:block">
+                            <pre className="text-lg font-tilt-neon font-black text-serenade-800 tracking-widest py-4 hidden sm:block selection:bg-serenade-600 selection:text-serenade-950">
                                 {code}
                             </pre>
-                            <pre className="text-base font-tilt-neon font-black text-serenade-800 tracking-widest py-4 sm:hidden">
+                            <pre className="text-base font-tilt-neon font-black text-serenade-800 tracking-widest py-4 sm:hidden selection:bg-serenade-600 selection:text-serenade-950">
                                 {code_xs}
                             </pre>
                         </div>
@@ -117,8 +145,44 @@ export function HowToUse() {
                 <div className="2xl:mx-52 lg:mx-30 mx-5 sm:mx-20 pb-10">
                     <div className="text-xl sm:text-2xl font-tilt-neon font-black text-serenade-800 tracking-widest pb-10 leading-relaxed">
                         After setting up the{" "}
-                        <Highlight text="coffee-diary.json"></Highlight> , you
-                        can get your coffee diary SVG.
+                        <Highlight text="coffee-diary.json"></Highlight> , enter
+                        your <Highlight text="Github username"></Highlight> to
+                        view your coffee diary SVG below.
+                    </div>
+                    <div className="pb-10">
+                        <div className="flex flex-wrap h-fit items-center">
+                            <PencilLine color="#472713" size={28} />
+                            <span className="text-serenade-950 font-tilt-neon font-black text-xl md:text-2xl ml-2">
+                                Github Username :
+                            </span>
+                            <input
+                                type="text"
+                                onChange={handleGithubNameChange}
+                                className="text-serenade-950 text-xl mt-2 md:text-2xl font-tilt-neon p-0.5 bg-coffee-white border-b-4 border-dashed border-serenade-950 ml-2"
+                            />
+                            {githubName ? (
+                                <button
+                                    className="ml-2 mt-2"
+                                    onClick={handleGithubNameBtnClick}
+                                >
+                                    <ArrowRightCircle
+                                        color="#472713"
+                                        size={28}
+                                    />
+                                </button>
+                            ) : (
+                                ""
+                            )}
+                        </div>
+                        {coffeeDiaryState ? (
+                            <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
+                                cannot find the{" "}
+                                <Highlight text="coffee-diary.json"></Highlight>{" "}
+                                file with this GitHub username.
+                            </div>
+                        ) : (
+                            ""
+                        )}
                     </div>
                     <div className="w-full grid grid-cols-2 bg-serenade-500 rounded-xl p-4 gap-x-10">
                         <div className="p-8 col-span-2 lg:col-span-1 flex h-full items-center">
@@ -141,7 +205,7 @@ export function HowToUse() {
                             </span>
                         </div>
                         <div className="col-span-2 lg:col-span-1 flex justify-center">
-                            <CoffeeDiary></CoffeeDiary>
+                            <CoffeeDiary url={coffeeDiaryUrl}></CoffeeDiary>
                         </div>
                     </div>
                 </div>
