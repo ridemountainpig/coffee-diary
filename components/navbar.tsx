@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export function Navbar() {
+interface NavbarProps {
+    text?: string;
+}
+
+export function Navbar({ text }: NavbarProps) {
     return (
         <>
             <div className="flex justify-between">
@@ -24,6 +28,11 @@ export function Navbar() {
                         height={75}
                     />
                 </a>
+                <div className="flex items-center text-center">
+                    <span className="lg:text-4xl md:text-3xl sm:text-2xl text-xl -mt-4 md:-mt-0 font-kodchasan font-black tracking-widest">
+                        {text}
+                    </span>
+                </div>
                 <a
                     className="md:m-4"
                     href="https://github.com/ridemountainpig/coffee-diary"
