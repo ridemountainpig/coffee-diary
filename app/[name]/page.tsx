@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CoffeeDiaryBoard } from "@/components/coffee-diary-board";
@@ -16,9 +19,15 @@ export default function UserPage({ params }: { params: { name: string } }) {
                         </div>
                         <div className="flex w-full justify-center h-full">
                             <div className="h-[90%] w-[90%] overflow-y-auto no-scrollbar">
-                                <CoffeeDiaryBoard
-                                    name={params.name}
-                                ></CoffeeDiaryBoard>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.8 }}
+                                >
+                                    <CoffeeDiaryBoard
+                                        name={params.name}
+                                    ></CoffeeDiaryBoard>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
