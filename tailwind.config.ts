@@ -34,7 +34,7 @@ const config: Config = {
             },
             fontFamily: {
                 nunito: ["Nunito", "sans-serif"],
-                kodchasan: ["Kodchasan", "sans-serif"],
+                "kodchasan-svg": ["Kodchasan", "sans-serif"],
                 koho: ["KoHo", "sans-serif"],
                 gluten: ["Gluten", "sans-serif"],
                 "dancing-script": ["Dancing Script", "cursive"],
