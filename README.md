@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![coffee-diary-banner](https://github.com/ridemountainpig/coffee-diary/assets/92412722/ac2bb2fe-e750-4bc6-8c77-26a70405e958)
 
-## Getting Started
+# Coffee Diary
 
-First, run the development server:
+![coffee-diary-SVG](https://coffee-diary.com/api/coffeeDiarySvg)
+![ridemountainpig-coffee-diary-SVG](https://coffee-diary.com/api/ridemountainpig)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Begin crafting your coffee diary, with a JSON file, chronicling the unique path you traverse with each cup.
+
+Coffee Diary SVG can be seamlessly integrated into your `GitHub README` with 
+[Coffee Diary Github Action](https://github.com/marketplace/actions/coffee-diary), or displayed in any other desired location, allowing you to showcase your coffee journey.
+
+## What is Coffee Diary
+
+#### `Coffee Diary: Your Personalized Coffee Journal, Visualized with SVG`
+
+Coffee Diary is an innovative project that transforms your coffee experiences into visually appealing SVG graphics, all managed through a simple JSON file on GitHub. This project offers coffee enthusiasts a unique way to document their coffee journey without the hassle of traditional journaling methods.
+
+## How to use Coffee Diary
+To use Coffee Diary, follow these steps:
+
+1. Add a `coffee-diary.json` file to your Github special repository root. `(the repo with your username)`
+2. Configure coffee-diary.json with the following format:
+   
+   In this JSON configuration, each coffee diary entry is encapsulated as an object keyed by the date in a `year-month-day` format, allowing you to document your coffee experiences on a daily basis. The entries for `bean-type`, `origin`, and `flavor` enable you to capture specific details about each coffee you enjoy.
+
+```
+{
+  "2024-1-24": {
+      "bean-type": "GEISHA",
+      "origin": "JAPAN",
+      "flavor": "This exquisite Geisha 
+      coffee offers a delicate balance of 
+      floral aromas and fruity notes."
+  },
+  "year-month-day": {
+      "bean-type": "bean type",
+      "origin": "coffee origin",
+      "flavor": "coffee flavor you tasted"
+  }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Done! Visit your own Coffee Diary website at `coffee-diary.com/GITHUB_USERNAME`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to use Coffee Diary github action
+Coffee Diary github action marketplace link: [Coffee Diary Github Action](https://github.com/marketplace/actions/coffee-diary)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Add a `coffee-diary.yml` file in your repository's `.github/workflows/` path.
+2. Configure `coffee-diary.yml` with the following format:
 
-## Learn More
+    - **Username**: Change `GITHUB_USERNAME` to your github username.
 
-To learn more about Next.js, take a look at the following resources:
+    - **Target Branch**: Change `BRANCH_NAME` to the branch you want to put Coffee Diary.
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```yml
+name: generate coffee diary svg
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+on:
+    schedule:
+        - cron: "0 */12 * * *"
+    workflow_dispatch:
 
-## Deploy on Vercel
+jobs:
+    download-svg:
+        runs-on: ubuntu-latest
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "16.x"
+
+            - name: Generate Coffee Diary SVG
+              uses: coffee-diary/coffee-diary@v1.0.0
+              with:
+                  username: GITHUB_USERNAME
+                  target-branch: BRANCH_NAME
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+3. Go to actions and run `generate coffee diary svg` workflow.
+
+4. Done! Now, navigate to your target branch and you'll find the Coffee Diary SVG. You can also integrate it into your GitHub README.
+
