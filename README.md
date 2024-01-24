@@ -1,5 +1,3 @@
-![coffee-diary-banner](https://github.com/ridemountainpig/coffee-diary/assets/92412722/ac2bb2fe-e750-4bc6-8c77-26a70405e958)
-
 # Coffee Diary
 
 ![coffee-diary-SVG](https://coffee-diary.com/api/coffeeDiarySvg)
