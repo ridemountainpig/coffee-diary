@@ -101,25 +101,27 @@ export function CoffeeDiaryCard({
                     </Dialog.Trigger>
                     <Dialog.Portal>
                         <Dialog.Content className="w-[340px] h-[530px] flex justify-center items-center fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-2xl bg-serenade-600">
-                            {isLoading == true ? (
-                                <div className="flex h-fit items-center">
-                                    <Loader2
-                                        className="animate-spin"
-                                        size={20}
-                                        color="#967253"
-                                        strokeWidth={3}
-                                    />
-                                    <span className="ml-2 text-[#967253] font-tilt-neon font-bold text-base tracking-widest">
-                                        Loading...
-                                    </span>
-                                </div>
-                            ) : (
-                                <></>
-                            )}
-                            <img
-                                src={`https://coffee-diary.com/api/${name}?date=${date}`}
-                                onLoad={() => setIsLoading(false)}
-                            ></img>
+                            <div>
+                                {isLoading == true ? (
+                                    <div className="flex h-fit items-center">
+                                        <Loader2
+                                            className="animate-spin"
+                                            size={20}
+                                            color="#967253"
+                                            strokeWidth={3}
+                                        />
+                                        <span className="ml-2 text-[#967253] font-tilt-neon font-bold text-base tracking-widest">
+                                            Loading...
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <></>
+                                )}
+                                <img
+                                    src={`https://coffee-diary.com/api/${name}?date=${date}`}
+                                    onLoad={() => setIsLoading(false)}
+                                ></img>
+                            </div>
                         </Dialog.Content>
                     </Dialog.Portal>
                 </Dialog.Root>

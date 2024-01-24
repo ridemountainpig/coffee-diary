@@ -65,16 +65,17 @@ export function HowToUse() {
         coffeeDiaryUrlBase + "coffeeDiarySvg",
     );
     const [coffeeDiaryState, setCoffeeDiaryState] = useState(false);
+    const [coffeeDiaryPage, setCoffeeDiaryPage] = useState(false);
 
     const handleGithubNameBtnClick = async () => {
         const response = await getCoffeeDiaryJson(githubName);
-        console.log(response);
         if (response == null) {
             setCoffeeDiaryUrl(coffeeDiaryUrlBase + "coffeeDiarySvg");
             setCoffeeDiaryState(true);
             return;
         }
         setCoffeeDiaryUrl(coffeeDiaryUrlBase + githubName);
+        setCoffeeDiaryPage(true);
         setCoffeeDiaryState(false);
     };
 
@@ -185,26 +186,52 @@ export function HowToUse() {
                         )}
                     </div>
                     <div className="w-full grid grid-cols-2 bg-serenade-500 rounded-xl p-4 gap-x-10">
-                        <div className="p-8 col-span-2 lg:col-span-1 flex h-full items-center">
-                            <span className="text-xl sm:text-2xl font-tilt-neon font-black text-center text-serenade-800 tracking-widest leading-relaxed lg:leading-loose">
-                                Coffee Diary SVG can be seamlessly integrated
-                                into your GitHub README with{" "}
-                                <a
-                                    href=""
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title="coffee diary github readme action example"
-                                >
-                                    <HighlightWithClick
-                                        text="Github Action"
-                                        underlineOffset={"underline-offset-4"}
-                                    ></HighlightWithClick>
-                                </a>
-                                , or displayed in any other desired location,
-                                allowing you to showcase your coffee journey.
-                            </span>
+                        <div className="p-8 col-span-2 lg:col-span-1 order-2 lg:order-1 flex h-full items-center">
+                            <div className="w-full h-fit">
+                                {coffeeDiaryPage ? (
+                                    <div className="text-center pb-6">
+                                        <a
+                                            href={`https://coffee-diary.com/${githubName}`}
+                                            title={`${githubName} coffee diary page`}
+                                            target="_blank"
+                                            className="text-xl sm:text-2xl font-tilt-neon font-black text-center text-serenade-800 tracking-wider"
+                                        >
+                                            <HighlightWithClick
+                                                text={`Look ${githubName} Coffee Diary`}
+                                                underlineOffset={
+                                                    "underline-offset-8"
+                                                }
+                                            ></HighlightWithClick>
+                                        </a>
+                                    </div>
+                                ) : (
+                                    <></>
+                                )}
+                                <div className="text-center">
+                                    <span className="text-xl sm:text-2xl font-tilt-neon font-black text-serenade-800 tracking-widest leading-relaxed lg:leading-loose">
+                                        Coffee Diary SVG can be seamlessly
+                                        integrated into your GitHub README with{" "}
+                                        <a
+                                            href=""
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="coffee diary github readme action example"
+                                        >
+                                            <HighlightWithClick
+                                                text="Github Action"
+                                                underlineOffset={
+                                                    "underline-offset-4"
+                                                }
+                                            ></HighlightWithClick>
+                                        </a>
+                                        , or displayed in any other desired
+                                        location, allowing you to showcase your
+                                        coffee journey.
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-span-2 lg:col-span-1 flex justify-center">
+                        <div className="col-span-2 lg:col-span-1 order-1 lg:order-2 flex justify-center">
                             <CoffeeDiary url={coffeeDiaryUrl}></CoffeeDiary>
                         </div>
                     </div>
