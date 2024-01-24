@@ -69,7 +69,7 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                                         underlineOffset="underline-offset-4"
                                     ></HighlightWithClick>{" "}
                                 </a>
-                                file for more information.
+                                content for more information.
                             </div>
                         </div>
                     </div>
