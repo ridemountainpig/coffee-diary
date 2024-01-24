@@ -54,18 +54,19 @@ export function HowToUse() {
 
     const [githubName, setGithubName] = useState("");
 
-    const handleGithubNameChange = (
-        event: React.ChangeEvent<HTMLInputElement>,
-    ) => {
-        setGithubName(event.target.value);
-    };
-
     const coffeeDiaryUrlBase = "https://coffee-diary.com/api/";
     const [coffeeDiaryUrl, setCoffeeDiaryUrl] = useState(
         coffeeDiaryUrlBase + "coffeeDiarySvg",
     );
     const [coffeeDiaryState, setCoffeeDiaryState] = useState(false);
     const [coffeeDiaryPage, setCoffeeDiaryPage] = useState(false);
+
+    const handleGithubNameChange = (
+        event: React.ChangeEvent<HTMLInputElement>,
+    ) => {
+        if (coffeeDiaryPage == true) setCoffeeDiaryPage(false);
+        setGithubName(event.target.value);
+    };
 
     const handleGithubNameBtnClick = async () => {
         const response = await getCoffeeDiaryJson(githubName);
