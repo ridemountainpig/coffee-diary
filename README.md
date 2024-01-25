@@ -73,7 +73,7 @@ jobs:
                   node-version: "16.x"
 
             - name: Generate Coffee Diary SVG
-              uses: coffee-diary/coffee-diary@v1.0.0
+              uses: ridemountainpig/coffee-diary@v1.0.0
               with:
                   username: GITHUB_USERNAME
                   target-branch: BRANCH_NAME
