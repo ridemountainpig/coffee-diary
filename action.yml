@@ -1,0 +1,40 @@
+name: "Coffee Diary"
+description: "A GitHub Action to generate Coffee Diary SVGs, allowing you to showcase your coffee journey."
+branding:
+    icon: "book"
+    color: "white"
+inputs:
+    username:
+        description: "Your Github username"
+        required: true
+    target-branch:
+        description: "Branch to deploy Coffee Diary SVGs in your repository"
+        required: true
+    github-token:
+        description: "GitHub token use to deploy github pages"
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Set up Node.js
+          uses: actions/setup-node@v4
+          with:
+              node-version: "16.x"
+
+        - name: Download SVG
+          shell: bash
+          run: |
+              mkdir coffee-diary-svg
+              curl -o coffee-diary-svg/${{ inputs.username }}-coffee-diary.svg https://coffee-diary.com/api/${{ inputs.username }}
+
+        - name: push coffee-diary.svg to the coffee-diary branch
+          uses: crazy-max/ghaction-github-pages@v4.0.0
+          with:
+              target_branch: ${{ inputs.target-branch }}
+              build_dir: coffee-diary-svg
+          env:
+              GITHUB_TOKEN: ${{ inputs.github-token }}
