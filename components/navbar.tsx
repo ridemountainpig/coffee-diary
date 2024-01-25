@@ -29,7 +29,7 @@ export function Navbar({ text }: NavbarProps) {
                     />
                 </a>
                 <div className="flex items-center text-center">
-                    <span className="lg:text-4xl md:text-3xl sm:text-2xl text-xl -mt-4 md:-mt-0 font-kodchasan font-black tracking-widest">
+                    <span className="lg:text-4xl md:text-3xl sm:text-2xl text-xl -mt-4 md:-mt-0 font-kodchasan font-black tracking-widest text-coffee-black">
                         {text}
                     </span>
                 </div>

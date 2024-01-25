@@ -13,7 +13,7 @@ export function Footer() {
                             height={125}
                         />
                     </div>
-                    <div className="text-3xl font-kodchasan font-black tracking-widest text-center">
+                    <div className="text-3xl font-kodchasan font-black tracking-widest text-center text-coffee-black">
                         Coffee Diary
                     </div>
                 </div>

@@ -111,7 +111,7 @@ export function HowToUse() {
                     </div>
                 </div>
                 <div className="2xl:mx-52 lg:mx-30 mx-5 sm:mx-20 h-fit">
-                    <div className="flex h-fit items-center text-black gap-x-2">
+                    <div className="flex h-fit items-center text-coffee-black gap-x-2">
                         <FileJson2 />
                         <div className="text-lg font-tilt-neon font-black tracking-widest py-4">
                             coffee-diary.json

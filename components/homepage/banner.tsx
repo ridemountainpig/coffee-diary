@@ -16,7 +16,7 @@ export function Banner() {
                     <h1 className="hidden">COFFEE DIARY</h1>
                     <h2 className="hidden">COFFEE</h2>
                     <h2 className="hidden">DIARY</h2>
-                    <div className="flex justify-center md:pb-4 lg:pb-0 sm:text-7xl md:text-8xl text-6.5xl font-kodchasan font-black tracking-widest">
+                    <div className="flex justify-center md:pb-4 lg:pb-0 sm:text-7xl md:text-8xl text-6.5xl font-kodchasan font-black tracking-widest text-coffee-black">
                         <span>C</span>
                         <Image
                             className="pr-2 hidden md:block"
@@ -34,7 +34,7 @@ export function Banner() {
                         />
                         <span>FFEE</span>
                     </div>
-                    <span className="sm:text-7xl md:text-8xl text-6.5xl font-kodchasan font-black tracking-widest">
+                    <span className="sm:text-7xl md:text-8xl text-6.5xl font-kodchasan font-black tracking-widest text-coffee-black">
                         DIARY
                     </span>
                 </motion.div>
