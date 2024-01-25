@@ -213,7 +213,7 @@ export function HowToUse() {
                                         Coffee Diary SVG can be seamlessly
                                         integrated into your GitHub README with{" "}
                                         <a
-                                            href=""
+                                            href="https://github.com/marketplace/actions/coffee-diary"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             title="coffee diary github readme action example"

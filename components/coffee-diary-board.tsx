@@ -59,7 +59,7 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                             <div className="text-xl font-tilt-neon font-black text-[#967253] tracking-widest mt-4">
                                 please check the{" "}
                                 <a
-                                    href=""
+                                    href="https://coffee-diary.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     title="coffee diary how to use"
