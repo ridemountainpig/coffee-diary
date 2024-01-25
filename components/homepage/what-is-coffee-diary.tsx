@@ -16,7 +16,7 @@ export function WhatIsCoffeeDiary() {
                 className="2xl:mx-52 lg:mx-30 mx-5 sm:mx-20"
             >
                 <div className="flex h-fit items-center gap-x-6 pb-4">
-                    <div className="text-3xl lg:text-4xl font-kodchasan font-black tracking-widest">
+                    <div className="text-3xl lg:text-4xl font-kodchasan font-black text-coffee-black tracking-widest">
                         What is Coffee Diary
                     </div>
                     <div className="hidden lg:block">

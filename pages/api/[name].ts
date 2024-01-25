@@ -79,11 +79,11 @@ export default async function coffeeDiarySvg(
                         </div>
                         </div>
 
-                        <div class="mt-4 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
-                        <div class="mt-4 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
+                        <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
+                        <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
                             Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.
                         </div>
-                        <div class="mt-7 px-6">
+                        <div class="mt-5 px-6">
                             <div class="grid grid-cols-4 text-coffee-brown">
                                 <div class="col-span-1 flex justify-center">
                                     <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b59c85"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <desc></desc> <g fill="none" fill-rule="evenodd" id="Coffee-Bag" stroke="none" stroke-width="1"> <g id="Group" transform="translate(6.000000, 4.000000)"> <path d="M11.6571001,3 L0.342899851,3 L-1,6.10591191 L-1,17 L13,17 L13,6.10591191 L11.6571001,3 Z" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2"></path> <g fill="#b59c85" id="Group-2" transform="translate(2.000000, 9.000000)"> <ellipse cx="5.5" cy="2" id="Oval" rx="1.5" ry="1" transform="translate(5.500000, 2.000000) rotate(-45.000000) translate(-5.500000, -2.000000) "></ellipse> <ellipse cx="2.5" cy="2" id="Oval-Copy" rx="1.5" ry="1" transform="translate(2.500000, 2.000000) rotate(-45.000000) translate(-2.500000, -2.000000) "></ellipse> </g> <rect height="4" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="0" y="-1"></rect> <rect height="4" id="Rectangle-Copy" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="8" y="-1"></rect> </g> <rect height="7" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="10" y="3"></rect> </g> </g></svg>
@@ -180,11 +180,11 @@ export default async function coffeeDiarySvg(
                         ${
                             continueDays == 0
                                 ? `
-                            <div class="mt-4 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
-                            <div class="mt-4 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
+                            <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
+                            <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
                                 Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.
                             </div>
-                            <div class="mt-7 px-6">
+                            <div class="mt-5 px-6">
                                 <div class="grid grid-cols-4 text-coffee-brown">
                                     <div class="col-span-1 flex justify-center">
                                         <svg width="40px" height="40px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b59c85"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <desc></desc> <g fill="none" fill-rule="evenodd" id="Coffee-Bag" stroke="none" stroke-width="1"> <g id="Group" transform="translate(6.000000, 4.000000)"> <path d="M11.6571001,3 L0.342899851,3 L-1,6.10591191 L-1,17 L13,17 L13,6.10591191 L11.6571001,3 Z" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2"></path> <g fill="#b59c85" id="Group-2" transform="translate(2.000000, 9.000000)"> <ellipse cx="5.5" cy="2" id="Oval" rx="1.5" ry="1" transform="translate(5.500000, 2.000000) rotate(-45.000000) translate(-5.500000, -2.000000) "></ellipse> <ellipse cx="2.5" cy="2" id="Oval-Copy" rx="1.5" ry="1" transform="translate(2.500000, 2.000000) rotate(-45.000000) translate(-2.500000, -2.000000) "></ellipse> </g> <rect height="4" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="0" y="-1"></rect> <rect height="4" id="Rectangle-Copy" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="8" y="-1"></rect> </g> <rect height="7" id="Rectangle" stroke="#b59c85" stroke-linejoin="round" stroke-width="2" width="4" x="10" y="3"></rect> </g> </g></svg>

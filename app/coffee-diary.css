@@ -665,12 +665,16 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .line-clamp-1 {
@@ -1188,11 +1192,6 @@ video {
 .text-\[\#967253\] {
   --tw-text-opacity: 1;
   color: rgb(150 114 83 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-coffee-black {
