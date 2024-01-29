@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import {
     Inter,
     Pacifico,
@@ -91,6 +92,7 @@ export default function RootLayout({
                     position="bottom-right"
                 />
                 {children}
+                <GoogleAnalytics gaId="G-RLZFE5T2TQ" />
             </body>
         </html>
     );
