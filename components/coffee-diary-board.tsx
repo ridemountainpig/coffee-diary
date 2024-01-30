@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { getCoffeeDiaryJson } from "@/lib/coffee-diary";
 import { CoffeeDiaryCard } from "@/components/coffee-diary-card";
@@ -35,46 +36,52 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
 
     return (
         <>
-            {coffeeDiary != null ? (
-                Object.entries(coffeeDiary).map(([date, entry], index) => (
-                    <CoffeeDiaryCard
-                        key={index}
-                        date={date}
-                        beanType={entry["bean-type"]}
-                        origin={entry["origin"]}
-                        flavor={entry["flavor"]}
-                        coffeeDay={Object.keys(coffeeDiary).length - index}
-                        name={name}
-                    ></CoffeeDiaryCard>
-                ))
-            ) : (
-                <>
-                    <div className="flex justify-center text-center">
-                        <div className="py-6">
-                            <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
-                                cannot find the{" "}
-                                <Highlight text="coffee-diary.json"></Highlight>{" "}
-                                file with this GitHub username.
-                            </div>
-                            <div className="text-xl font-tilt-neon font-black text-[#967253] tracking-widest mt-4">
-                                please check the{" "}
-                                <a
-                                    href="https://coffee-diary.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title="coffee diary how to use"
-                                >
-                                    <HighlightWithClick
-                                        text="How to use"
-                                        underlineOffset="underline-offset-4"
-                                    ></HighlightWithClick>{" "}
-                                </a>
-                                content for more information.
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+            >
+                {coffeeDiary != null ? (
+                    Object.entries(coffeeDiary).map(([date, entry], index) => (
+                        <CoffeeDiaryCard
+                            key={index}
+                            date={date}
+                            beanType={entry["bean-type"]}
+                            origin={entry["origin"]}
+                            flavor={entry["flavor"]}
+                            coffeeDay={Object.keys(coffeeDiary).length - index}
+                            name={name}
+                        ></CoffeeDiaryCard>
+                    ))
+                ) : (
+                    <>
+                        <div className="flex justify-center text-center">
+                            <div className="py-6">
+                                <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
+                                    cannot find the{" "}
+                                    <Highlight text="coffee-diary.json"></Highlight>{" "}
+                                    file with this GitHub username.
+                                </div>
+                                <div className="text-xl font-tilt-neon font-black text-[#967253] tracking-widest mt-4">
+                                    please check the{" "}
+                                    <a
+                                        href="https://coffee-diary.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="coffee diary how to use"
+                                    >
+                                        <HighlightWithClick
+                                            text="How to use"
+                                            underlineOffset="underline-offset-4"
+                                        ></HighlightWithClick>{" "}
+                                    </a>
+                                    content for more information.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </>
-            )}
+                    </>
+                )}
+            </motion.div>
         </>
     );
 }

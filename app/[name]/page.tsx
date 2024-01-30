@@ -1,9 +1,41 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CoffeeDiaryBoard } from "@/components/coffee-diary-board";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: { name: string };
+}) {
+    return {
+        title: params.name + " | COFFEE DIARY",
+        description:
+            "Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.",
+        openGraph: {
+            type: "website",
+            url: "https://coffee-diary.com/",
+            title: params.name + "'s COFFEE DIARY",
+            description:
+                "Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.",
+            images: [
+                {
+                    url: "https://coffee-diary.com/coffee-diary.png",
+                    width: 1200,
+                    height: 630,
+                    alt: params.name + "'s COFFEE DIARY",
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: params.name + "'s COFFEE DIARY",
+            description:
+                "Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.",
+            creator: "@ridemountainpig",
+            images: ["https://coffee-diary.com/coffee-diary.png"],
+        },
+    };
+}
 
 export default function UserPage({ params }: { params: { name: string } }) {
     return (
@@ -19,15 +51,9 @@ export default function UserPage({ params }: { params: { name: string } }) {
                         </div>
                         <div className="flex w-full justify-center h-full">
                             <div className="h-[90%] w-[90%] overflow-y-auto no-scrollbar">
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.8 }}
-                                >
-                                    <CoffeeDiaryBoard
-                                        name={params.name}
-                                    ></CoffeeDiaryBoard>
-                                </motion.div>
+                                <CoffeeDiaryBoard
+                                    name={params.name}
+                                ></CoffeeDiaryBoard>
                             </div>
                         </div>
                     </div>
