@@ -69,7 +69,14 @@ export function HowToUse() {
     };
 
     const handleGithubNameBtnClick = async () => {
-        const response = await getCoffeeDiaryJson(githubName);
+        let response;
+        try {
+            response = await getCoffeeDiaryJson(githubName);
+        } catch (error) {
+            if (error instanceof Error) {
+                response = null;
+            }
+        }
         if (response == null) {
             setCoffeeDiaryUrl(coffeeDiaryUrlBase + "coffeeDiarySvg");
             setCoffeeDiaryState(true);

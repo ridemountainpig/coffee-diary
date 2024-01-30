@@ -6,14 +6,17 @@ export async function getCoffeeDiaryJson(githubName: string) {
 
         if (!response.ok) {
             throw new Error(
-                "Failed to fetch coffee diary json, github name not found",
+                "Failed to fetch coffee diary json",
             );
         }
 
-        const coffeeDiaryJson = await response.json();
-        return coffeeDiaryJson;
+        try {
+            const coffeeDiaryJson = await response.json();
+            return coffeeDiaryJson;
+        } catch (jsonError) {
+            throw new Error("Failed to parse JSON");
+        }
     } catch (error) {
-        console.log("Failed to fetch coffee diary json, github name not found");
-        return null;
+        throw error;
     }
 }

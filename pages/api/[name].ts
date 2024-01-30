@@ -27,14 +27,18 @@ async function getCoffeeDiaryJson(githubName: string) {
 
         if (!response.ok) {
             throw new Error(
-                "Failed to fetch coffee diary json, github name not found",
+                "Failed to fetch coffee diary json",
             );
         }
 
-        const coffeeDiaryJson = await response.json();
-        return coffeeDiaryJson;
+        try {
+            const coffeeDiaryJson = await response.json();
+            return coffeeDiaryJson;
+        } catch (jsonError) {
+            throw new Error("Failed to parse JSON");
+        }
     } catch (error) {
-        console.log("Failed to fetch coffee diary json, github name not found");
+        console.log(error);
         return null;
     }
 }
@@ -120,13 +124,21 @@ export default async function coffeeDiarySvg(
         let flavor = "";
         let formattedDate = "";
         let continueDays = 0;
-
         if (typeof date === "string" && coffeeDiaryJson != null) {
             const coffeeDiaryData = coffeeDiaryJson[date];
             if (coffeeDiaryData != null) {
-                beanType = coffeeDiaryData["bean-type"];
-                origin = coffeeDiaryData["origin"];
-                flavor = coffeeDiaryData["flavor"];
+                beanType =
+                    coffeeDiaryData["bean-type"] == undefined
+                        ? "No Bean Type"
+                        : coffeeDiaryData["bean-type"];
+                origin =
+                    coffeeDiaryData["origin"] == undefined
+                        ? "No Origin"
+                        : coffeeDiaryData["origin"];
+                flavor =
+                    coffeeDiaryData["flavor"] == undefined
+                        ? "No Flavor"
+                        : coffeeDiaryData["flavor"];
 
                 formattedDate = date.replace(/-/g, " . ");
 
@@ -139,9 +151,18 @@ export default async function coffeeDiarySvg(
                 const latestCoffeeDiaryDate = keys[0];
                 const latestCoffeeDiary = coffeeDiaryJson[keys[0]];
 
-                beanType = latestCoffeeDiary["bean-type"];
-                origin = latestCoffeeDiary["origin"];
-                flavor = latestCoffeeDiary["flavor"];
+                beanType =
+                    latestCoffeeDiary["bean-type"] == undefined
+                        ? "No Bean Type"
+                        : latestCoffeeDiary["bean-type"];
+                origin =
+                    latestCoffeeDiary["origin"] == undefined
+                        ? "No Origin"
+                        : latestCoffeeDiary["origin"];
+                flavor =
+                    latestCoffeeDiary["flavor"] == undefined
+                        ? "No Flavor"
+                        : latestCoffeeDiary["flavor"];
 
                 formattedDate = latestCoffeeDiaryDate.replace(/-/g, " . ");
                 continueDays = keys.length;

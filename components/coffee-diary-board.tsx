@@ -14,6 +14,8 @@ interface CoffeeDiaryBoardProps {
 export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
     const [coffeeDiary, setCoffeeDiary] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [isFetchError, setIsFetchError] = useState(false);
+    const [isJsonError, setIsJsonError] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -21,7 +23,17 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                 const json = await getCoffeeDiaryJson(name);
                 setCoffeeDiary(json);
             } catch (error) {
-                console.error(error);
+                if (error instanceof Error) {
+                    if (
+                        error.message.includes(
+                            "Failed to fetch coffee diary json",
+                        )
+                    ) {
+                        setIsFetchError(true);
+                    } else if (error.message.includes("Failed to parse JSON")) {
+                        setIsJsonError(true);
+                    }
+                }
             } finally {
                 setIsLoading(false);
             }
@@ -41,45 +53,58 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
             >
-                {coffeeDiary != null ? (
+                {coffeeDiary != null &&
+                isFetchError != true &&
+                isJsonError != true ? (
                     Object.entries(coffeeDiary).map(([date, entry], index) => (
                         <CoffeeDiaryCard
                             key={index}
                             date={date}
-                            beanType={entry["bean-type"]}
-                            origin={entry["origin"]}
-                            flavor={entry["flavor"]}
+                            beanType={entry["bean-type"] || "No Bean Type"}
+                            origin={entry["origin"] || "No Origin"}
+                            flavor={entry["flavor"] || "No Flavor"}
                             coffeeDay={Object.keys(coffeeDiary).length - index}
                             name={name}
                         ></CoffeeDiaryCard>
                     ))
                 ) : (
-                    <>
-                        <div className="flex justify-center text-center">
-                            <div className="py-6">
-                                <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
-                                    cannot find the{" "}
-                                    <Highlight text="coffee-diary.json"></Highlight>{" "}
-                                    file with this GitHub username.
-                                </div>
-                                <div className="text-xl font-tilt-neon font-black text-[#967253] tracking-widest mt-4">
-                                    please check the{" "}
-                                    <a
-                                        href="https://coffee-diary.com/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="coffee diary how to use"
-                                    >
-                                        <HighlightWithClick
-                                            text="How to use"
-                                            underlineOffset="underline-offset-4"
-                                        ></HighlightWithClick>{" "}
-                                    </a>
-                                    content for more information.
-                                </div>
+                    <></>
+                )}
+                {isFetchError == true && (
+                    <div className="flex justify-center text-center">
+                        <div className="py-6">
+                            <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
+                                cannot find the{" "}
+                                <Highlight text="coffee-diary.json"></Highlight>{" "}
+                                file with this GitHub username.
+                            </div>
+                            <div className="text-xl font-tilt-neon font-black text-[#967253] tracking-widest mt-4">
+                                please check the{" "}
+                                <a
+                                    href="https://coffee-diary.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    title="coffee diary how to use"
+                                >
+                                    <HighlightWithClick
+                                        text="How to use"
+                                        underlineOffset="underline-offset-4"
+                                    ></HighlightWithClick>{" "}
+                                </a>
+                                content for more information.
                             </div>
                         </div>
-                    </>
+                    </div>
+                )}
+                {isJsonError == true && (
+                    <div className="flex justify-center text-center">
+                        <div className="py-6">
+                            <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
+                                coffee-diary.json syntax error please check your
+                                json file.
+                            </div>
+                        </div>
+                    </div>
                 )}
             </motion.div>
         </>
