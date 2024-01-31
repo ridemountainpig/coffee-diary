@@ -9,14 +9,13 @@ export async function generateMetadata({
 }) {
     return {
         title: params.name + " | COFFEE DIARY",
-        description:
-            "Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.",
+        description: params.name + "'s COFFEE DIARY.",
         openGraph: {
             type: "website",
             url: "https://coffee-diary.com/",
             title: params.name + "'s COFFEE DIARY",
             description:
-                "Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.",
+                "See " + params.name + "'s COFFEE DIARY on COFFEE DIARY.",
             images: [
                 {
                     url: "https://coffee-diary.com/coffee-diary.png",
@@ -30,7 +29,7 @@ export async function generateMetadata({
             card: "summary_large_image",
             title: params.name + "'s COFFEE DIARY",
             description:
-                "Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.",
+                "See " + params.name + "'s COFFEE DIARY on COFFEE DIARY.",
             creator: "@ridemountainpig",
             images: ["https://coffee-diary.com/coffee-diary.png"],
         },

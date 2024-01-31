@@ -156,7 +156,8 @@ export function HowToUse() {
                         After setting up the{" "}
                         <Highlight text="coffee-diary.json"></Highlight> , enter
                         your <Highlight text="Github username"></Highlight> to
-                        view your coffee diary SVG below.
+                        view your coffee diary SVG below, and visit your own
+                        Coffee Diary website.
                     </div>
                     <div className="pb-10">
                         <div className="flex flex-wrap h-fit items-center">
@@ -200,7 +201,7 @@ export function HowToUse() {
                                     <div className="text-center pb-6">
                                         <a
                                             href={`https://coffee-diary.com/${githubName}`}
-                                            title={`${githubName} coffee diary page`}
+                                            title={`${githubName}'s coffee diary`}
                                             target="_blank"
                                             className="text-xl sm:text-2xl font-tilt-neon font-black text-center text-serenade-800 tracking-wider"
                                         >
