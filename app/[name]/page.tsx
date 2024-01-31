@@ -58,7 +58,7 @@ export default function UserPage({ params }: { params: { name: string } }) {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
+            <Footer name={params.name}></Footer>
         </>
     );
 }

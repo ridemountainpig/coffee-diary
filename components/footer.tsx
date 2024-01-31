@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { MousePointerClick } from "lucide-react";
 
-export function Footer() {
+interface FooterProps {
+    name?: string;
+}
+
+export function Footer({ name }: FooterProps) {
     return (
         <>
             <div className="bg-coffee-brown h-72 flex items-center">
@@ -19,18 +23,24 @@ export function Footer() {
                     </div>
                     <div className="text-center mt-4 flex justify-center">
                         <div className="w-fit">
-                            <a
-                                href={`https://coffee-diary.com/ridemountainpig`}
-                                title={`ridemountainpig's coffee diary`}
-                                target="_blank"
-                                className="text-sm sm:text-base font-kodchasan font-black text-center tracking-widest flex h-fit justify-center items-center text-serenade-500"
-                            >
-                                {"Ridemountainpig's Coffee Diary"}
-                                <MousePointerClick
-                                    color="#faf1e4"
-                                    className="ml-2"
-                                />
-                            </a>
+                            {name ? (
+                                <div className="text-sm sm:text-base font-kodchasan font-black text-center tracking-widest flex h-fit justify-center items-center text-serenade-500">
+                                    {`${name}'s Coffee Diary`}
+                                </div>
+                            ) : (
+                                <a
+                                    href={`https://coffee-diary.com/ridemountainpig`}
+                                    title={`ridemountainpig's coffee diary`}
+                                    target="_blank"
+                                    className="text-sm sm:text-base font-kodchasan font-black text-center tracking-widest flex h-fit justify-center items-center text-serenade-500"
+                                >
+                                    {"Ridemountainpig's Coffee Diary"}
+                                    <MousePointerClick
+                                        color="#faf1e4"
+                                        className="ml-2"
+                                    />
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>
