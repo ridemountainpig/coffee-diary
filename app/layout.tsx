@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import {
-    Inter,
-    Pacifico,
-    Kodchasan,
-    Tilt_Neon,
-    Capriola,
-} from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter, Pacifico, Kodchasan, Tilt_Neon } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { Rwdot } from "rwdot";
@@ -28,12 +24,6 @@ const kodchasan = Kodchasan({
 const tilt_neon = Tilt_Neon({
     subsets: ["latin"],
     variable: "--font-tilt-neon",
-    weight: "400",
-});
-
-const capriola = Capriola({
-    subsets: ["latin"],
-    variable: "--font-capriola",
     weight: "400",
 });
 
@@ -85,7 +75,7 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <body
-                className={`${pacifico.variable} ${kodchasan.variable} ${tilt_neon.variable} ${capriola.variable}`}
+                className={`${pacifico.variable} ${kodchasan.variable} ${tilt_neon.variable}`}
             >
                 <Rwdot
                     show={process.env.RWDOT_ENV === "development"}
@@ -93,6 +83,8 @@ export default function RootLayout({
                 />
                 {children}
                 <GoogleAnalytics gaId="G-RLZFE5T2TQ" />
+                <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );

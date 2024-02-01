@@ -53,7 +53,6 @@ const config: Config = {
             pacifico: ["var(--font-pacifico)"],
             kodchasan: ["var(--font-kodchasan)"],
             "tilt-neon": ["var(--font-tilt-neon)"],
-            capriola: ["var(--font-capriola)"],
         },
     },
     plugins: [require("@tailwindcss/line-clamp")],
