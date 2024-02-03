@@ -75,7 +75,7 @@ export default function RootLayout({
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <body
-                className={`${pacifico.variable} ${kodchasan.variable} ${tilt_neon.variable}`}
+                className={`${pacifico.variable} ${kodchasan.variable} ${tilt_neon.variable} selection:bg-serenade-600 selection:text-serenade-100`}
             >
                 <Rwdot
                     show={process.env.RWDOT_ENV === "development"}

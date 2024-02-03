@@ -50,6 +50,9 @@ dependencies:
     react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
+    react-parallax-tilt:
+        specifier: ^1.7.209
+        version: 1.7.209(react-dom@18.2.0)(react@18.2.0)
     rwdot:
         specifier: ^0.0.5
         version: 0.0.5(react-dom@18.2.0)(react@18.2.0)
@@ -124,6 +127,7 @@ packages:
             {
                 integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==,
             }
+        requiresBuild: true
         dev: false
         optional: true
 
@@ -3418,6 +3422,19 @@ packages:
             {
                 integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
             }
+
+    /react-parallax-tilt@1.7.209(react-dom@18.2.0)(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-S1obOJvDp+YCipZjd/iVCbPoQTiQZ3cPrqkFHzoJMDOQT2LSdIQHSYwJNXbZDlgdsK2N1Hr/9VnhKWK5qMNzAA==,
+            }
+        peerDependencies:
+            react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+            react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+        dependencies:
+            react: 18.2.0
+            react-dom: 18.2.0(react@18.2.0)
+        dev: false
 
     /react-remove-scroll-bar@2.3.4(@types/react@18.2.40)(react@18.2.0):
         resolution:
