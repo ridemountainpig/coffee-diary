@@ -1033,6 +1033,16 @@ video {
   padding-right: 1.5rem;
 }
 
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1090,10 +1100,6 @@ video {
   text-align: right;
 }
 
-.font-dancing-script {
-  font-family: Dancing Script, cursive;
-}
-
 .font-gluten {
   font-family: Gluten, sans-serif;
 }
@@ -1104,10 +1110,6 @@ video {
 
 .font-kodchasan-svg {
   font-family: Kodchasan, sans-serif;
-}
-
-.font-nunito {
-  font-family: Nunito, sans-serif;
 }
 
 .font-pacifico {
@@ -1135,6 +1137,10 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-flavor {
+  font-size: .7rem;
 }
 
 .text-lg {
@@ -1167,6 +1173,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.leading-flavor {
+  line-height: .9rem;
 }
 
 .leading-loose {
@@ -1207,6 +1217,11 @@ video {
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.text-serenade-500 {
+  --tw-text-opacity: 1;
+  color: rgb(250 241 228 / var(--tw-text-opacity));
 }
 
 .text-serenade-800 {
@@ -1313,6 +1328,10 @@ body {
         rgb(var(--background-start-rgb));
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .selection\:bg-serenade-600 *::-moz-selection {
   --tw-bg-opacity: 1;
   background-color: rgb(224 206 184 / var(--tw-bg-opacity));
@@ -1321,6 +1340,16 @@ body {
 .selection\:bg-serenade-600 *::selection {
   --tw-bg-opacity: 1;
   background-color: rgb(224 206 184 / var(--tw-bg-opacity));
+}
+
+.selection\:text-serenade-100 *::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 254 252 / var(--tw-text-opacity));
+}
+
+.selection\:text-serenade-100 *::selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 254 252 / var(--tw-text-opacity));
 }
 
 .selection\:text-serenade-950 *::-moz-selection {
@@ -1341,6 +1370,16 @@ body {
 .selection\:bg-serenade-600::selection {
   --tw-bg-opacity: 1;
   background-color: rgb(224 206 184 / var(--tw-bg-opacity));
+}
+
+.selection\:text-serenade-100::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 254 252 / var(--tw-text-opacity));
+}
+
+.selection\:text-serenade-100::selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 254 252 / var(--tw-text-opacity));
 }
 
 .selection\:text-serenade-950::-moz-selection {
@@ -1383,6 +1422,11 @@ body {
 
   .sm\:text-7xl {
     font-size: 5rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

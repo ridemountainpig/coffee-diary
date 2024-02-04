@@ -74,7 +74,7 @@ export default async function coffeeDiarySvg(
                         <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest w-full text-center p-2"></div>
                         <div class="w-full h-8 flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
-                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest px-4">"Day One: Journey of Java"</div>
+                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest px-4">Day One: Journey of Java</div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
                         </div>
                         <div class="w-full flex justify-center">
@@ -83,8 +83,8 @@ export default async function coffeeDiarySvg(
                         </div>
                         </div>
 
-                        <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
-                        <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
+                        <div class="mt-3 text-xs font-black font-mono text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
+                        <div class="mt-3 text-xs font-black font-mono text-coffee-black tracking-widest w-full px-4 text-center">
                             Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.
                         </div>
                         <div class="mt-5 px-6">
@@ -201,8 +201,8 @@ export default async function coffeeDiarySvg(
                         ${
                             continueDays == 0
                                 ? `
-                            <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
-                            <div class="mt-3 text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full px-4 text-center">
+                            <div class="mt-3 text-xs font-black font-mono text-coffee-black tracking-widest w-full px-4 text-center">Life is like a cup of coffee, it's all in how you make it or take it.</div>
+                            <div class="mt-3 text-xs font-black font-mono text-coffee-black tracking-widest w-full px-4 text-center">
                                 Begin crafting your coffee diary, chronicling the unique path you traverse with each cup.
                             </div>
                             <div class="mt-5 px-6">
@@ -223,26 +223,26 @@ export default async function coffeeDiarySvg(
                             </div>
                             `
                                 : `
-                            <div class="text-sm font-black font-dancing-script text-coffee-black tracking-widest w-full text-center">By ${githubName}</div>
+                            <div class="text-xs font-black font-mono text-coffee-black tracking-widest w-full text-center py-0.5">By ${githubName}</div>
     
                             <div class="grid grid-cols-9 mt-2 px-4">
                                 <div class="col-span-4 h-8 flex items-center border-r-3 border-t-3 border-coffee-black">
-                                    <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
+                                    <span class="w-full text-coffee-black text-sm font-black font-mono text-center tracking-wide">
                                         BEAN TYPE
                                     </span>
                                 </div>
                                 <div class="col-span-5 h-8 flex items-center border-t-3 border-coffee-black">
-                                    <span class="w-full px-0.5 text-coffee-black text-sm font-black font-nunito text-center tracking-wide line-clamp-1">
+                                    <span class="w-full px-0.5 text-coffee-black text-sm font-black font-mono text-center tracking-wide line-clamp-1">
                                         ${beanType}
                                     </span>
                                 </div>
                                 <div class="col-span-3 h-8 flex items-center border-r-3 border-t-3 border-coffee-black">
-                                    <span class="w-full text-coffee-black text-sm font-black font-nunito text-center tracking-wide">
+                                    <span class="w-full text-coffee-black text-sm font-black font-mono text-center tracking-wide">
                                         ORIGIN
                                     </span>
                                 </div>
                                 <div class="col-span-6 h-8 flex items-center border-t-3 border-coffee-black">
-                                    <span class="w-full px-0.5 text-coffee-black text-sm font-black font-nunito text-center tracking-wide line-clamp-1">
+                                    <span class="w-full px-0.5 text-coffee-black text-sm font-black font-mono text-center tracking-wide line-clamp-1">
                                         ${origin}
                                     </span>
                                 </div>
@@ -250,7 +250,7 @@ export default async function coffeeDiarySvg(
                                 <div class="col-span-9 h-8 flex items-center border-t-3 border-coffee-black">
                                     <div class="w-full flex justify-center items-center gap-x-2">
                                         <svg fill="#021928" width="20px" height="20px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-1152,-256)"> <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"></rect> <g id="Icons1" serif:id="Icons"> <g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g> <g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g> <g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g> <g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g> <g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g> <g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g> <g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g> <g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g> <g id="toggle-off"> </g> <g id="shredder"> </g> <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g> <g id="react"> </g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g> <g id="user"> </g> <g id="coffee-bean"> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)"> <g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g> </g> <g id="coffee-bean-filled" transform="matrix(0.866025,0.5,-0.5,0.866025,717.879,-387.292)"> <g transform="matrix(1,0,0,1,0,-0.699553)"> <path d="M737.673,328.231C738.494,328.056 739.334,328.427 739.757,329.152C739.955,329.463 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.079,358.559 736.492,366.083 738.435,371.679C738.697,372.426 738.482,373.258 737.89,373.784C737.298,374.31 736.447,374.426 735.735,374.077C730.192,371.375 722.028,365.058 722.021,352C722.015,340.226 728.812,330.279 737.673,328.231Z"></path> </g> <g transform="matrix(-1,0,0,-1,1483.03,703.293)"> <path d="M737.609,328.246C738.465,328.06 739.344,328.446 739.785,329.203C739.97,329.49 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.1,358.507 736.503,365.948 738.383,371.527C738.646,372.304 738.415,373.164 737.796,373.703C737.177,374.243 736.294,374.356 735.56,373.989C730.02,371.241 722.028,364.92 722.021,352C722.016,340.255 728.779,330.328 737.609,328.246Z"></path> </g> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)"> <g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g> </g> <g id="clipboard"> </g> <g transform="matrix(1,0,0,1,128.011,1.35415)"> <g id="clipboard-paste"> </g> </g> <g id="clipboard-copy"> </g> <g id="Layer1"> </g> </g> </g> </g></svg>
-                                        <span class="text-coffee-black text-sm font-bold font-nunito text-center">
+                                        <span class="text-coffee-black text-sm font-bold font-mono text-center">
                                             FLAVOR
                                         </span>
                                         <svg fill="#021928" width="20px" height="20px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g transform="matrix(1,0,0,1,-1152,-256)"> <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"></rect> <g id="Icons1" serif:id="Icons"> <g id="Strike"> </g> <g id="H1"> </g> <g id="H2"> </g> <g id="H3"> </g> <g id="list-ul"> </g> <g id="hamburger-1"> </g> <g id="hamburger-2"> </g> <g id="list-ol"> </g> <g id="list-task"> </g> <g id="trash"> </g> <g id="vertical-menu"> </g> <g id="horizontal-menu"> </g> <g id="sidebar-2"> </g> <g id="Pen"> </g> <g id="Pen1" serif:id="Pen"> </g> <g id="clock"> </g> <g id="external-link"> </g> <g id="hr"> </g> <g id="info"> </g> <g id="warning"> </g> <g id="plus-circle"> </g> <g id="minus-circle"> </g> <g id="vue"> </g> <g id="cog"> </g> <g id="logo"> </g> <g id="radio-check"> </g> <g id="eye-slash"> </g> <g id="eye"> </g> <g id="toggle-off"> </g> <g id="shredder"> </g> <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g> <g id="react"> </g> <g id="check-selected"> </g> <g id="turn-off"> </g> <g id="code-block"> </g> <g id="user"> </g> <g id="coffee-bean"> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)"> <g id="coffee-beans"> <g id="coffee-bean1" serif:id="coffee-bean"> </g> </g> </g> <g id="coffee-bean-filled" transform="matrix(0.866025,0.5,-0.5,0.866025,717.879,-387.292)"> <g transform="matrix(1,0,0,1,0,-0.699553)"> <path d="M737.673,328.231C738.494,328.056 739.334,328.427 739.757,329.152C739.955,329.463 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.079,358.559 736.492,366.083 738.435,371.679C738.697,372.426 738.482,373.258 737.89,373.784C737.298,374.31 736.447,374.426 735.735,374.077C730.192,371.375 722.028,365.058 722.021,352C722.015,340.226 728.812,330.279 737.673,328.231Z"></path> </g> <g transform="matrix(-1,0,0,-1,1483.03,703.293)"> <path d="M737.609,328.246C738.465,328.06 739.344,328.446 739.785,329.203C739.97,329.49 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.1,358.507 736.503,365.948 738.383,371.527C738.646,372.304 738.415,373.164 737.796,373.703C737.177,374.243 736.294,374.356 735.56,373.989C730.02,371.241 722.028,364.92 722.021,352C722.016,340.255 728.779,330.328 737.609,328.246Z"></path> </g> </g> <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)"> <g id="coffee-beans-filled"> <g id="coffee-bean2" serif:id="coffee-bean"> </g> </g> </g> <g id="clipboard"> </g> <g transform="matrix(1,0,0,1,128.011,1.35415)"> <g id="clipboard-paste"> </g> </g> <g id="clipboard-copy"> </g> <g id="Layer1"> </g> </g> </g> </g></svg>
@@ -258,7 +258,7 @@ export default async function coffeeDiarySvg(
                                 </div>
                                 <div class="col-span-9 py-2 flex items-center border-t-3 border-coffee-black">
                                     <div class="w-full h-16 flex justify-center items-center">
-                                        <span class="text-coffee-black text-xs font-bold font-nunito text-center line-clamp-4">
+                                        <span class="text-coffee-black text-flavor leading-flavor font-bold font-mono text-center line-clamp-4">
                                             ${flavor}
                                         </span>
                                     </div>
