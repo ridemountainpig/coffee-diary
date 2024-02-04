@@ -258,7 +258,7 @@ export default async function coffeeDiarySvg(
                                 </div>
                                 <div class="col-span-9 py-2 flex items-center border-t-3 border-coffee-black">
                                     <div class="w-full h-16 flex justify-center items-center">
-                                        <span class="text-coffee-black text-flavor leading-flavor font-bold font-mono text-center line-clamp-4">
+                                        <span class="text-coffee-black text-xs font-bold font-mono text-center line-clamp-4">
                                             ${flavor}
                                         </span>
                                     </div>

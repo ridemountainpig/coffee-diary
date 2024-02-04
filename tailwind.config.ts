@@ -44,10 +44,6 @@ const config: Config = {
                 "3xs": ".5rem",
                 "6.5xl": "4.125rem",
                 "7xl": "5rem",
-                "flavor": ".7rem",
-            },
-            lineHeight: {
-                "flavor": ".9rem",
             },
             borderWidth: {
                 "3": "3px",

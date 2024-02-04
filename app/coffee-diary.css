@@ -1139,10 +1139,6 @@ video {
   line-height: 1.5rem;
 }
 
-.text-flavor {
-  font-size: .7rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1173,10 +1169,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.leading-flavor {
-  line-height: .9rem;
 }
 
 .leading-loose {
