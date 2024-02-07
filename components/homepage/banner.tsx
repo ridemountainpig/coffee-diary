@@ -6,7 +6,7 @@ import Image from "next/image";
 export function Banner() {
     return (
         <>
-            <div className="relative">
+            <div className="relative z-10">
                 <motion.div
                     className="lg:flex justify-items-center lg:gap-x-6 py-20 text-center"
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -39,7 +39,7 @@ export function Banner() {
                     </span>
                 </motion.div>
                 <motion.div
-                    className="absolute -left-20 -top-14"
+                    className="absolute -left-20 -top-14 -z-10"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 1 }}

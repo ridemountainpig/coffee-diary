@@ -5,53 +5,13 @@ import { motion } from "framer-motion";
 import { AreaContent } from "@/components/area-content";
 import { AreaTitle } from "@/components/area-title";
 import { CoffeeDiary } from "@/components/coffee-diary";
+import { CoffeeDiaryJson } from "@/components/coffee-diary-json";
 import { ArrowRightCircle, FileJson2, PencilLine } from "lucide-react";
 import { Highlight } from "@/components/highlight";
 import { HighlightWithClick } from "@/components/highlight-with-click";
 import { getCoffeeDiaryJson } from "@/lib/coffee-diary";
 
 export function HowToUse() {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const day = today.getDate();
-
-    const code = `
-    {
-        "${year}-${month}-${day}": {
-            "bean-type": "GEISHA",
-            "origin": "JAPAN",
-            "flavor": "This exquisite Geisha 
-            coffee offers a delicate balance of 
-            floral aromas and fruity notes."
-        },
-        "year-month-day": {
-            "bean-type": "bean type",
-            "origin": "coffee origin",
-            "flavor": "coffee flavor you tasted"
-        }
-    }
-`;
-
-    const code_xs = `
-    {   
-        "${year}-${month}-${day}": {
-            "bean-type": "GEISHA",
-            "origin": "JAPAN",
-            "flavor": "This exquisite 
-            Geisha coffee offers a 
-            delicate balance of floral 
-            aromas and fruity notes."
-        },
-        "year-month-day": {
-            "bean-type": "bean type",
-            "origin": "coffee origin",
-            "flavor": "coffee flavor 
-            you tasted"
-        }
-    }
-`;
-
     const [githubName, setGithubName] = useState("");
 
     const coffeeDiaryUrlBase = "https://coffee-diary.com/api/";
@@ -127,14 +87,7 @@ export function HowToUse() {
                 </div>
                 <div className="2xl:mx-52 lg:mx-30 mx-5 sm:mx-20 h-fit grid grid-cols-2 gap-x-10 pb-10">
                     <div className="col-span-2 xl:col-span-1 h-full">
-                        <div className="bg-serenade-500 rounded-xl p-2 sm:p-4 2xl:p-10">
-                            <pre className="text-lg font-tilt-neon font-black text-serenade-800 tracking-widest py-4 hidden sm:block selection:bg-serenade-600 selection:text-serenade-950">
-                                {code}
-                            </pre>
-                            <pre className="text-base font-tilt-neon font-black text-serenade-800 tracking-widest py-4 sm:hidden selection:bg-serenade-600 selection:text-serenade-950">
-                                {code_xs}
-                            </pre>
-                        </div>
+                        <CoffeeDiaryJson></CoffeeDiaryJson>
                     </div>
                     <div className="col-span-2 xl:col-span-1 h-full flex items-center xl:mt-0 mt-4">
                         <span className="text-xl sm:text-2xl font-tilt-neon font-black text-serenade-800 tracking-widest leading-relaxed lg:leading-loose">
