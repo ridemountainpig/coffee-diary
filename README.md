@@ -9,6 +9,7 @@ Coffee Diary SVG can be seamlessly integrated into your `GitHub README` with
 [Coffee Diary Github Action](https://github.com/marketplace/actions/coffee-diary), or displayed in any other desired location, allowing you to showcase your coffee journey.
 
 Also you can visit your own Coffee Diary website at `coffee-diary.com/GITHUB_USERNAME`.
+
 Like this: [coffee-diary.com/ridemountainpig](https://coffee-diary.com/ridemountainpig)
 
 ## What is Coffee Diary

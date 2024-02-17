@@ -5,9 +5,7 @@ export async function getCoffeeDiaryJson(githubName: string) {
         );
 
         if (!response.ok) {
-            throw new Error(
-                "Failed to fetch coffee diary json",
-            );
+            throw new Error("Failed to fetch coffee diary json");
         }
 
         try {
