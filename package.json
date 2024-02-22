@@ -21,7 +21,7 @@
         "@radix-ui/react-dialog": "^1.0.5",
         "@tailwindcss/line-clamp": "^0.4.4",
         "@vercel/analytics": "^1.1.2",
-        "@vercel/speed-insights": "^1.0.8",
+        "@vercel/speed-insights": "^1.0.10",
         "framer-motion": "^10.16.16",
         "lucide-react": "^0.309.0",
         "next": "14.0.3",
