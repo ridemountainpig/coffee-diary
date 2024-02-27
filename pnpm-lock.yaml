@@ -35,6 +35,9 @@ dependencies:
   '@vercel/speed-insights':
     specifier: ^1.0.10
     version: 1.0.10(next@14.0.3)(react@18.2.0)
+  dynamic-dock:
+    specifier: ^1.0.0
+    version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
   framer-motion:
     specifier: ^10.16.16
     version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
@@ -1183,6 +1186,16 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dynamic-dock@1.0.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-HcYLbmjahCXR8Zoo2dK06DxkXmRO+1Y5wJYCGKEvcLMPqUyzQf6BH3AcAGcdv/mwudgFJYQ+Um06ZsS66BlfkA==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+      react-dom: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /electron-to-chromium@1.4.601:
     resolution: {integrity: sha512-SpwUMDWe9tQu8JX5QCO1+p/hChAi9AE9UpoC3rcHVc+gdCGlbT3SGb5I1klgb952HRIyvt9wZhSz9bNBYz9swA==}
