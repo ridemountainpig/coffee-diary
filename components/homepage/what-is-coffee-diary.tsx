@@ -13,17 +13,17 @@ export function WhatIsCoffeeDiary() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="2xl:mx-52 lg:mx-30 mx-5 sm:mx-20"
+                className="lg:mx-30 mx-5 sm:mx-20 2xl:mx-52"
             >
                 <div className="flex h-fit items-center gap-x-6 pb-4">
-                    <div className="text-3xl lg:text-4xl font-kodchasan font-black text-coffee-black tracking-widest">
+                    <div className="font-kodchasan text-3xl font-black tracking-widest text-coffee-black lg:text-4xl">
                         What is Coffee Diary
                     </div>
                     <div className="hidden lg:block">
                         <CoffeeStep />
                     </div>
                 </div>
-                <div className="text-xl sm:text-2xl font-tilt-neon font-black text-serenade-800 tracking-widest pb-4">
+                <div className="pb-4 font-tilt-neon text-xl font-black tracking-widest text-serenade-800 sm:text-2xl">
                     <Highlight
                         text="Coffee Diary: Your Personalized Coffee Journal,
                         Visualized with SVG"

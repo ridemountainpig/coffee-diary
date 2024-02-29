@@ -10,14 +10,14 @@ import DynamicDock from "dynamic-dock";
 export default function Home() {
     return (
         <>
-            <div className="bg-coffee-white h-screen">
+            <div className="h-screen bg-coffee-white">
                 <Navbar></Navbar>
-                <div className="flex justify-center h-[65%]">
-                    <div className="h-fit block lg:hidden">
+                <div className="flex h-[65%] justify-center">
+                    <div className="block h-fit lg:hidden">
                         <Banner></Banner>
                         <CoffeeNavbar></CoffeeNavbar>
                     </div>
-                    <div className="h-fit hidden lg:block">
+                    <div className="hidden h-fit lg:block">
                         <Banner></Banner>
                         <DynamicDock gapX={0} imageWidth={64}>
                             <CoffeeNavbar></CoffeeNavbar>
@@ -25,10 +25,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="bg-coffee-white flex justify-center w-full -mt-36 pb-10">
+            <div className="-mt-36 flex w-full justify-center bg-coffee-white pb-10">
                 <Diary></Diary>
             </div>
-            <div className="bg-coffee-white w-full">
+            <div className="w-full bg-coffee-white">
                 <WhatIsCoffeeDiary></WhatIsCoffeeDiary>
                 <HowToUse></HowToUse>
             </div>

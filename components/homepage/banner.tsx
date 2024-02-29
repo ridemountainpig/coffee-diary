@@ -8,7 +8,7 @@ export function Banner() {
         <>
             <div className="relative z-10">
                 <motion.div
-                    className="lg:flex justify-items-center lg:gap-x-6 py-20 text-center"
+                    className="justify-items-center py-20 text-center lg:flex lg:gap-x-6"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
@@ -16,17 +16,17 @@ export function Banner() {
                     <h1 className="hidden">COFFEE DIARY</h1>
                     <h2 className="hidden">COFFEE</h2>
                     <h2 className="hidden">DIARY</h2>
-                    <div className="flex justify-center md:pb-4 lg:pb-0 sm:text-7xl md:text-8xl text-6.5xl font-kodchasan font-black tracking-widest text-coffee-black">
+                    <div className="flex justify-center font-kodchasan text-6.5xl font-black tracking-widest text-coffee-black sm:text-7xl md:pb-4 md:text-8xl lg:pb-0">
                         <span>C</span>
                         <Image
-                            className="pr-2 hidden md:block"
+                            className="hidden pr-2 md:block"
                             src="/coffee-bean.svg"
                             alt="coffee bean icon"
                             width={100}
                             height={100}
                         />
                         <Image
-                            className="pr-2 block md:hidden"
+                            className="block pr-2 md:hidden"
                             src="/coffee-bean.svg"
                             alt="coffee bean icon"
                             width={80}
@@ -34,7 +34,7 @@ export function Banner() {
                         />
                         <span>FFEE</span>
                     </div>
-                    <span className="sm:text-7xl md:text-8xl text-6.5xl font-kodchasan font-black tracking-widest text-coffee-black">
+                    <span className="font-kodchasan text-6.5xl font-black tracking-widest text-coffee-black sm:text-7xl md:text-8xl">
                         DIARY
                     </span>
                 </motion.div>
@@ -44,7 +44,7 @@ export function Banner() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 1 }}
                 >
-                    <div className="md:h-96 md:w-96 rounded-full bg-serenade-900 opacity-30 blur-3xl"></div>
+                    <div className="rounded-full bg-serenade-900 opacity-30 blur-3xl md:h-96 md:w-96"></div>
                 </motion.div>
             </div>
         </>

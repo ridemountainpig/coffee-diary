@@ -33,13 +33,13 @@ export function CoffeeDiaryCard({
     return (
         <>
             <div
-                className={`w-full h-fit py-4 my-2 border-dashed border-serenade-800 ${
+                className={`my-2 h-fit w-full border-dashed border-serenade-800 py-4 ${
                     coffeeDay == 1 ? "" : "border-b-4"
                 }`}
             >
-                <div className="lg:flex justify-between w-full">
-                    <div className="lg:flex h-fit items-center">
-                        <div className="text-serenade-950 font-tilt-neon font-semibold text-xl tracking-widest">
+                <div className="w-full justify-between lg:flex">
+                    <div className="h-fit items-center lg:flex">
+                        <div className="font-tilt-neon text-xl font-semibold tracking-widest text-serenade-950">
                             {dateString}
                         </div>
                         <div className="flex h-fit items-center">
@@ -48,9 +48,9 @@ export function CoffeeDiaryCard({
                                 alt="coffee bean"
                                 width={24}
                                 height={24}
-                                className="lg:ml-2 -ml-1"
+                                className="-ml-1 lg:ml-2"
                             />
-                            <div className="text-coffee-brown font-tilt-neon font-semibold text-xl tracking-widest">
+                            <div className="font-tilt-neon text-xl font-semibold tracking-widest text-coffee-brown">
                                 {beanType}
                             </div>
                             <Map
@@ -59,7 +59,7 @@ export function CoffeeDiaryCard({
                                 strokeWidth="3"
                                 className="ml-2"
                             />
-                            <div className="text-coffee-brown font-tilt-neon font-semibold text-xl tracking-widest ml-1">
+                            <div className="ml-1 font-tilt-neon text-xl font-semibold tracking-widest text-coffee-brown">
                                 {origin}
                             </div>
                         </div>
@@ -71,12 +71,12 @@ export function CoffeeDiaryCard({
                             strokeWidth={3}
                             className="mr-1"
                         />
-                        <div className="text-coffee-brown font-tilt-neon font-semibold text-xl tracking-widest ml-1">
+                        <div className="ml-1 font-tilt-neon text-xl font-semibold tracking-widest text-coffee-brown">
                             {coffeeDay} Coffee Days
                         </div>
                     </div>
                 </div>
-                <div className="mt-4 text-[#967253] font-tilt-neon font-bold text-xl tracking-widest">
+                <div className="mt-4 font-tilt-neon text-xl font-bold tracking-widest text-[#967253]">
                     <span className="text-serenade-950">Flavor: </span>
                     {flavor}
                 </div>

@@ -5,7 +5,7 @@ interface AreaContentProps {
 export function AreaContent({ content }: AreaContentProps) {
     return (
         <>
-            <div className="text-xl sm:text-2xl font-tilt-neon font-black text-serenade-800 tracking-widest pb-4 leading-relaxed lg:leading-loose">
+            <div className="pb-4 font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl lg:leading-loose">
                 {content}
             </div>
         </>

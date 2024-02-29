@@ -9,7 +9,7 @@ export function Diary() {
     return (
         <>
             <motion.div
-                className="bg-coffee-alabaster mx-5 sm:mx-20 lg:mx-30 h-fit lg:h-[38rem] rounded-3xl px-3 pt-3 md:px-6 md:pt-6 relative"
+                className="lg:mx-30 relative mx-5 h-fit rounded-3xl bg-coffee-alabaster px-3 pt-3 sm:mx-20 md:px-6 md:pt-6 lg:h-[38rem]"
                 initial={{ y: 200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 1.2 }}
@@ -47,7 +47,7 @@ export function Diary() {
                     alt="coffee pen"
                     width={128}
                     height={128}
-                    className="absolute right-4 bottom-0.5 lg:block hidden"
+                    className="absolute bottom-0.5 right-4 hidden lg:block"
                 />
             </motion.div>
         </>

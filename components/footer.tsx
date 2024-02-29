@@ -8,8 +8,8 @@ interface FooterProps {
 export function Footer({ name }: FooterProps) {
     return (
         <>
-            <div className="bg-coffee-brown h-72 flex items-center">
-                <div className="w-full h-fit">
+            <div className="flex h-72 items-center bg-coffee-brown">
+                <div className="h-fit w-full">
                     <div className="flex justify-center">
                         <Image
                             src="/coffee-diary.png"
@@ -18,13 +18,13 @@ export function Footer({ name }: FooterProps) {
                             height={125}
                         />
                     </div>
-                    <div className="text-3xl font-kodchasan font-black tracking-widest text-center text-coffee-black">
+                    <div className="text-center font-kodchasan text-3xl font-black tracking-widest text-coffee-black">
                         Coffee Diary
                     </div>
-                    <div className="text-center mt-4 flex justify-center">
+                    <div className="mt-4 flex justify-center text-center">
                         <div className="w-fit">
                             {name ? (
-                                <div className="text-sm sm:text-base font-kodchasan font-black text-center tracking-widest flex h-fit justify-center items-center text-serenade-500">
+                                <div className="flex h-fit items-center justify-center text-center font-kodchasan text-sm font-black tracking-widest text-serenade-500 sm:text-base">
                                     {`${name}'s Coffee Diary`}
                                 </div>
                             ) : (
@@ -32,7 +32,7 @@ export function Footer({ name }: FooterProps) {
                                     href={`https://coffee-diary.com/ridemountainpig`}
                                     title={`ridemountainpig's coffee diary`}
                                     target="_blank"
-                                    className="text-sm sm:text-base font-kodchasan font-black text-center tracking-widest flex h-fit justify-center items-center text-serenade-500"
+                                    className="flex h-fit items-center justify-center text-center font-kodchasan text-sm font-black tracking-widest text-serenade-500 sm:text-base"
                                 >
                                     {"Ridemountainpig's Coffee Diary"}
                                     <MousePointerClick
@@ -45,13 +45,13 @@ export function Footer({ name }: FooterProps) {
                     </div>
                 </div>
             </div>
-            <div className="bg-coffee-brown h-fit flex justify-between text-serenade-800">
+            <div className="flex h-fit justify-between bg-coffee-brown text-serenade-800">
                 <a
                     className="m-4"
                     href="https://github.com/ridemountainpig/coffee-diary"
                     title="coffee diary"
                 >
-                    <div className="text-xs font-kodchasan font-black tracking-widest px-3 py-2 bg-serenade-500 rounded-xl">
+                    <div className="rounded-xl bg-serenade-500 px-3 py-2 font-kodchasan text-xs font-black tracking-widest">
                         star project
                     </div>
                 </a>
@@ -61,7 +61,7 @@ export function Footer({ name }: FooterProps) {
                     title="coffee diary github"
                     target="_blank"
                 >
-                    <div className="text-xs font-kodchasan font-black tracking-widest px-3 py-2 bg-serenade-500 rounded-xl">
+                    <div className="rounded-xl bg-serenade-500 px-3 py-2 font-kodchasan text-xs font-black tracking-widest">
                         by ridemountainpig
                     </div>
                 </a>

@@ -5,7 +5,7 @@ interface HighlightProps {
 export function Highlight({ text }: HighlightProps) {
     return (
         <>
-            <span className="lg:px-3 lg:py-1 lg:bg-serenade-500 rounded-xl lg:text-serenade-800 text-serenade-950">
+            <span className="rounded-xl text-serenade-950 lg:bg-serenade-500 lg:px-3 lg:py-1 lg:text-serenade-800">
                 {text}
             </span>
         </>
