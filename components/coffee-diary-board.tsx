@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { getCoffeeDiaryJson } from "@/lib/coffee-diary";
 import { CoffeeDiaryCard } from "@/components/coffee-diary-card";
 import { Highlight } from "@/components/highlight";
@@ -73,12 +74,21 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                 {isFetchError == true && (
                     <div className="flex justify-center text-center">
                         <div className="py-6">
-                            <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
+                            <div className="flex justify-center">
+                                <Image
+                                    className="-mt-10"
+                                    src="/coffee-diary-book.png"
+                                    alt="coffee diary book icon"
+                                    width={150}
+                                    height={150}
+                                />
+                            </div>
+                            <div className="font-tilt-neon text-xl font-black tracking-widest text-red-700">
                                 cannot find the{" "}
                                 <Highlight text="coffee-diary.json"></Highlight>{" "}
                                 file with this GitHub username.
                             </div>
-                            <div className="text-xl font-tilt-neon font-black text-[#967253] tracking-widest mt-4">
+                            <div className="mt-4 font-tilt-neon text-xl font-black tracking-widest text-[#967253]">
                                 please check the{" "}
                                 <a
                                     href="https://coffee-diary.com/"
@@ -99,7 +109,7 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                 {isJsonError == true && (
                     <div className="flex justify-center text-center">
                         <div className="py-6">
-                            <div className="text-xl font-tilt-neon font-black text-red-700 tracking-widest mt-4">
+                            <div className="mt-4 font-tilt-neon text-xl font-black tracking-widest text-red-700">
                                 coffee-diary.json syntax error please check your
                                 json file.
                             </div>
