@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: "*",
             allow: "/",
-            disallow: ["/api/", "/favicon.ico", "/_next/static/media/"],
+            disallow: ["/api/", "/_next/static/media/"],
         },
         sitemap: "https://coffee-diary.com/sitemap.xml",
     };
