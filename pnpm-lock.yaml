@@ -33,8 +33,8 @@ dependencies:
     specifier: ^1.2.2
     version: 1.2.2(next@14.2.3)(react@18.2.0)
   '@vercel/speed-insights':
-    specifier: ^1.0.10
-    version: 1.0.10(next@14.2.3)(react@18.2.0)
+    specifier: ^1.0.12
+    version: 1.0.12(next@14.2.3)(react@18.2.0)
   dynamic-dock:
     specifier: ^1.0.0
     version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -812,8 +812,8 @@ packages:
       server-only: 0.0.1
     dev: false
 
-  /@vercel/speed-insights@1.0.10(next@14.2.3)(react@18.2.0):
-    resolution: {integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==}
+  /@vercel/speed-insights@1.0.12(next@14.2.3)(react@18.2.0):
+    resolution: {integrity: sha512-ZGQ+a7bcfWJD2VYEp2R1LHvRAMyyaFBYytZXsfnbOMkeOvzGNVxUL7aVUvisIrTZjXTSsxG45DKX7yiw6nq2Jw==}
     requiresBuild: true
     peerDependencies:
       '@sveltejs/kit': ^1 || ^2
