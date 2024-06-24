@@ -40,10 +40,10 @@ export async function generateMetadata({
 export default function UserPage({ params }: { params: { name: string } }) {
     return (
         <>
-            <div className="h-screen bg-coffee-white">
+            <div className="h-fit bg-coffee-white">
                 <Navbar text={`Coffee Diary`}></Navbar>
-                <div className="flex h-[82%] w-full items-center justify-center">
-                    <div className="h-full w-[90%] rounded-2xl bg-serenade-500 py-6">
+                <div className="flex h-[55rem] w-full items-center justify-center">
+                    <div className="h-[92%] w-[90%] rounded-2xl bg-serenade-500 py-6">
                         <div className="flex w-full justify-center">
                             <CoffeeDiaryName
                                 name={params.name}

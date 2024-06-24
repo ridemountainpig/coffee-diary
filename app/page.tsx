@@ -10,9 +10,9 @@ import DynamicDock from "dynamic-dock";
 export default function Home() {
     return (
         <>
-            <div className="h-screen bg-coffee-white">
+            <div className="h-fit bg-coffee-white">
                 <Navbar></Navbar>
-                <div className="flex h-[65%] justify-center">
+                <div className="flex h-fit justify-center">
                     <div className="block h-fit lg:hidden">
                         <Banner></Banner>
                         <CoffeeNavbar></CoffeeNavbar>
@@ -25,7 +25,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="-mt-36 flex w-full justify-center bg-coffee-white pb-10">
+            <div className="pt-20 flex w-full justify-center bg-coffee-white pb-10">
                 <Diary></Diary>
             </div>
             <div className="w-full bg-coffee-white">

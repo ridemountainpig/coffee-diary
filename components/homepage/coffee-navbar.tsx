@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function CoffeeNavbar() {
     return (
         <>
-            <div className="flex justify-center gap-x-8 md:gap-x-10">
+            <div className="flex justify-center gap-x-8 md:gap-x-10 h-32">
                 <motion.div
                     initial={{ y: -40, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
