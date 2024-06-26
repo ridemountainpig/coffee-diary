@@ -1373,6 +1373,7 @@ packages:
             {
                 integrity: sha512-qMKFd2qG/36aA4GwvKq8MxnPgCQAmBWmSyLWsJcbn8v03wvIPQ/hG1Ms8bPzndZxMDoHpxez5VOS+gC9Yi24/Q==,
             }
+        requiresBuild: true
         dev: false
         optional: true
 
@@ -1394,6 +1395,7 @@ packages:
             {
                 integrity: sha512-v8DTT08AS/G0F9xrhyLtepoo9EJBJ85FRSMbu1pQUlAf6A8T0tEEQGMVObWeqpjhSPXsE0VGlluFBJu2fdoTNg==,
             }
+        requiresBuild: true
         dev: false
         optional: true
 
@@ -1402,6 +1404,7 @@ packages:
             {
                 integrity: sha512-lh/eITfU8hrj9Ru5quUp0Io1kJWIk1bTjzo7JH1P5dWmQ2EL4hFUlfI8FonAhSlgIfhn63p84CDY/x+PisgcXA==,
             }
+        requiresBuild: true
         dependencies:
             bare-os: 2.4.0
         dev: false
@@ -1412,6 +1415,7 @@ packages:
             {
                 integrity: sha512-tiDAH9H/kP+tvNO5sczyn9ZAA7utrSMobyDchsnyyXBuUe2FSQWbxhtuHB8jwpHYYevVo2UJpcmvvjrbHboUUQ==,
             }
+        requiresBuild: true
         dependencies:
             streamx: 2.18.0
         dev: false
