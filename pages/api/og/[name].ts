@@ -75,7 +75,9 @@ export default async function coffeeDiarySvg(
         `;
 
     try {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        });
         const page = await browser.newPage();
 
         // Load the SVG data into the page
