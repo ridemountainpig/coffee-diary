@@ -101,6 +101,19 @@ export default async function coffeeDiarySvg(
             throw new Error("SVG element not found");
         }
 
+        // Get bounding box of the SVG element
+        const boundingBox = await svgElement.boundingBox();
+        if (!boundingBox) {
+            throw new Error("Could not get bounding box of the SVG element");
+        }
+
+        // Set viewport to the size of the SVG
+        await page.setViewport({
+            width: Math.ceil(boundingBox.width),
+            height: Math.ceil(boundingBox.height),
+            deviceScaleFactor: 4,
+        });
+
         // Convert SVG to PNG
         const pngBuffer = await svgElement.screenshot({ type: "png" });
 
