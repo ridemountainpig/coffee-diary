@@ -36,10 +36,10 @@ export default async function coffeeDiarySvg(
                         </div>
                         <div class="text-3xl font-black font-kodchasan-svg text-coffee-black tracking-widest w-full text-center">COFFEE</div>
                         <div class="text-3xl font-black font-kodchasan-svg text-coffee-black tracking-widest w-full text-center">DIARY</div>
-                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest w-full text-center p-2"></div>
+                        <div class="text-xs font-bold font-mono text-coffee-black tracking-widest w-full text-center p-2"></div>
                         <div class="w-full h-8 flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
-                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest px-4">Day One: Journey of Java</div>
+                        <div class="text-xs font-bold font-mono text-coffee-black tracking-widest px-4">Day One: Journey of Java</div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
                         </div>
                         <div class="w-full flex justify-center">
@@ -91,8 +91,7 @@ export default async function coffeeDiarySvg(
 
                     <link rel="preconnect" href="https://fonts.googleapis.com">
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-                    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">                
+                    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">             
                 </head>
                 <body>
                     <div id="svg-container">${ogSvgContent}</div>
