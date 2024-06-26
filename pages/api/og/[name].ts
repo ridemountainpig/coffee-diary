@@ -82,21 +82,22 @@ export default async function coffeeDiarySvg(
 
         // Load the SVG data into the page
         await page.setContent(`
-              <!DOCTYPE html>
-              <html lang="en">
+            <!DOCTYPE html>
+            <html lang="en">
                 <head>
-                  <meta charset="UTF-8">
-                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                  <title>SVG to PNG</title>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>SVG to PNG</title>
 
-                  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">                
                 </head>
                 <body>
-                  <div id="svg-container">${ogSvgContent}</div>
+                    <div id="svg-container">${ogSvgContent}</div>
                 </body>
-              </html>
+            </html>
             `);
 
         // Select the SVG element
