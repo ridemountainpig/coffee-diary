@@ -77,6 +77,7 @@ export default async function coffeeDiarySvg(
     try {
         const browser = await puppeteer.launch({
             args: ["--no-sandbox", "--disable-setuid-sandbox"],
+            executablePath: "/home/sbx_user1051/.cache/puppeteer"
         });
         const page = await browser.newPage();
 
