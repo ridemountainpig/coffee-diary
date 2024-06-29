@@ -1,7 +1,0 @@
-{
-    "build": {
-        "env": {
-            "PUPPETEER_CACHE_DIR": ".cache/puppeteer"
-        }
-    }
-}
