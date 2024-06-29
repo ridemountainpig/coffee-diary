@@ -1,9 +1,0 @@
-{
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/next"
-        }
-    ],
-    "installCommand": "./install_dependencies.sh"
-}
