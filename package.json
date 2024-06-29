@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "PUPPETEER_CACHE_DIR=$(pwd)/.cache/puppeteer pnpm install puppeteer && next build",
         "start": "next start",
         "lint": "next lint",
         "format": "npx prettier --write .",
