@@ -1,11 +1,4 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/node"
-        }
-    ],
     "build": {
         "env": {
             "PUPPETEER_CACHE_DIR": "/src/.cache/puppeteer"
@@ -15,5 +8,4 @@
             "build": "pnpm install"
         }
     },
-    "files": ["package.json*", "tsconfig.json*", ".npmrc*", "pnpm-lock.yaml*"]
 }
