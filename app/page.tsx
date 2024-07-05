@@ -25,7 +25,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="pt-20 flex w-full justify-center bg-coffee-white pb-10">
+            <div className="flex w-full justify-center bg-coffee-white pb-10 pt-20">
                 <Diary></Diary>
             </div>
             <div className="w-full bg-coffee-white">
