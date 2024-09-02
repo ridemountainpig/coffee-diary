@@ -12,7 +12,7 @@
         "tailwind": "tailwindcss -i ./app/globals.css -o ./app/coffee-diary.css --watch"
     },
     "dependencies": {
-        "@next/third-parties": "^14.2.3",
+        "@next/third-parties": "^14.2.7",
         "@radix-ui/react-dialog": "^1.0.5",
         "@tailwindcss/line-clamp": "^0.4.4",
         "@vercel/analytics": "^1.2.2",
