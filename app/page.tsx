@@ -4,7 +4,7 @@ import { Banner } from "@/components/homepage/banner";
 import { Diary } from "@/components/homepage/diary";
 import { Footer } from "@/components/footer";
 import { WhatIsCoffeeDiary } from "@/components/homepage/what-is-coffee-diary";
-import { HowToUse } from "@/components/homepage/how-to-use";
+import { CoffeeMenu } from "@/components/homepage/coffee-menu";
 import DynamicDock from "dynamic-dock";
 
 export default function Home() {
@@ -30,7 +30,9 @@ export default function Home() {
             </div>
             <div className="w-full bg-coffee-white">
                 <WhatIsCoffeeDiary></WhatIsCoffeeDiary>
-                <HowToUse></HowToUse>
+            </div>
+            <div className="flex w-full justify-center bg-coffee-white pb-16 pt-6">
+                <CoffeeMenu></CoffeeMenu>
             </div>
             <Footer></Footer>
         </>
