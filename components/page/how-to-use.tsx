@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AreaContent } from "@/components/area-content";
 import { AreaTitle } from "@/components/area-title";
 import { CoffeeDiary } from "@/components/coffee-diary";
-import { CoffeeDiaryJson } from "@/components/coffee-diary-json";
+import { CoffeeDiaryJson } from "@/components/coffee-diary/coffee-diary-json";
 import { ArrowRightCircle, FileJson2, PencilLine } from "lucide-react";
 import { Highlight } from "@/components/highlight";
 import { HighlightWithClick } from "@/components/highlight-with-click";
@@ -52,10 +52,10 @@ export function HowToUse() {
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                transition={{ duration: 1, delay: 0.1 }}
                 viewport={{ once: true }}
             >
-                <div className="lg:mx-30 mx-5 mt-10 sm:mx-20 2xl:mx-52">
+                <div className="lg:mx-30 mx-5 mt-2 sm:mx-20 2xl:mx-52">
                     <AreaTitle title="How to use"></AreaTitle>
                     <div className="pb-4 font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl">
                         Add a <Highlight text="coffee-diary.json"></Highlight>{" "}
