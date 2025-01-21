@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { CoffeeDiaryBoard } from "@/components/coffee-diary-board";
-import { CoffeeDiaryName } from "@/components/coffee-diary-name";
+import { CoffeeDiaryBoard } from "@/components/coffee-diary/coffee-diary-board";
+import { CoffeeDiaryName } from "@/components/coffee-diary/coffee-diary-name";
 
 export async function generateMetadata({
     params,

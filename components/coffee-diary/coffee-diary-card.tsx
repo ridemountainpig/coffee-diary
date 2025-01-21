@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CalendarDays, Map } from "lucide-react";
-import { CoffeeDiaryDialog } from "@/components/coffee-diary-dialog";
+import { CoffeeDiaryDialog } from "@/components/coffee-diary/coffee-diary-dialog";
 
 interface CoffeeDiaryCardProps {
     date: string;
