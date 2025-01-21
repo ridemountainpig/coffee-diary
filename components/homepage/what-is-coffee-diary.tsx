@@ -29,7 +29,7 @@ export function WhatIsCoffeeDiary() {
                         Visualized with SVG"
                     ></Highlight>
                 </div>
-                <AreaContent content="Coffee Diary is an innovative project that transforms your coffee experiences into visually appealing SVG graphics, all managed through a simple JSON file on GitHub. This project offers coffee enthusiasts a unique way to document their coffee journey without the hassle of traditional journaling methods."></AreaContent>
+                <AreaContent content="Coffee Diary is an innovative project that turns your coffee experiences into visually appealing SVG graphics. It provides coffee enthusiasts with a unique way to document their coffee journey without the hassle of traditional journaling methods."></AreaContent>
             </motion.div>
         </>
     );
