@@ -36,7 +36,10 @@ export function CoffeeMenu() {
                 <div className="xl:w-1/3">
                     <MenuCategory category="COFFEE DIARY"></MenuCategory>
                     <div className="p-4">
-                        <MenuLink item="Write Coffee Diary" link="/"></MenuLink>
+                        <MenuLink
+                            item="Write Coffee Diary"
+                            link="/write-coffee-diary"
+                        ></MenuLink>
                         <MenuLink
                             item="Github Coffee Diary"
                             link="/github-coffee-diary"
