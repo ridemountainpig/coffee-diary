@@ -55,6 +55,5 @@ const config: Config = {
             "tilt-neon": ["var(--font-tilt-neon)"],
         },
     },
-    plugins: [require("@tailwindcss/line-clamp")],
 };
 export default config;
