@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { getCoffeeDiaryJson } from "@/lib/coffee-diary";
-import { CoffeeDiaryCard } from "@/components/coffee-diary-card";
+import { CoffeeDiaryCard } from "@/components/coffee-diary/coffee-diary-card";
 import { Highlight } from "@/components/highlight";
 import { HighlightWithClick } from "@/components/highlight-with-click";
 
