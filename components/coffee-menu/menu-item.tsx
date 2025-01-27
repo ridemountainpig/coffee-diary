@@ -8,7 +8,7 @@ interface MenuItemProps {
 export function MenuItem({ item, price }: MenuItemProps) {
     return (
         <div className="flex items-center py-1">
-            <span className="font-kodchasan text-lg font-black tracking-widest text-serenade-900">
+            <span className="text-serenade-90 px-1 font-kodchasan text-lg font-black tracking-widest">
                 {item}
             </span>
             <div className="mx-4 flex-grow border-t-3 border-dotted border-serenade-900"></div>

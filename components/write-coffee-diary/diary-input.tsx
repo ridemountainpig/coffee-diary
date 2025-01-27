@@ -6,9 +6,9 @@ interface DiaryInputProps {
 export function DiaryInput({ inputTitle, setInputValue }: DiaryInputProps) {
     return (
         <div className="flex h-fit flex-wrap items-center py-4">
-            <span className="ml-2 font-tilt-neon text-xl font-black text-serenade-950 md:text-2xl">
+            <div className="ml-2 font-tilt-neon text-xl font-black text-serenade-950 md:text-2xl">
                 {inputTitle} :
-            </span>
+            </div>
             <input
                 type="text"
                 onChange={(e) => setInputValue(e.target.value)}

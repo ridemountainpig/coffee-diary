@@ -8,7 +8,7 @@ interface MenuLinkProps {
 export function MenuLink({ item, link }: MenuLinkProps) {
     return (
         <a
-            className="flex items-center rounded-lg py-1 duration-300 hover:bg-serenade-600 xl:px-2"
+            className="flex items-center rounded-lg px-1 py-1 duration-300 hover:bg-serenade-600 xl:px-2"
             href={link}
         >
             <span className="font-kodchasan text-lg font-black tracking-widest text-serenade-900">

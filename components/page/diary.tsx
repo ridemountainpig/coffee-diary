@@ -61,7 +61,7 @@ export function Diary({
             viewport={{ once: true }}
         >
             <div className="lg:mx-30 mx-5 mt-2 sm:mx-10 2xl:mx-52">
-                <div className="rounded-xl bg-serenade-500 p-8 shadow-xl shadow-coffee-brown">
+                <div className="rounded-xl bg-serenade-500 p-4 py-8 shadow-xl shadow-coffee-brown lg:p-8">
                     <div className="flex w-full justify-center pb-2">
                         <div className="text-center font-tilt-neon text-xl font-black tracking-widest text-serenade-950 md:text-2xl lg:text-3xl">
                             {name}&apos;s Coffee Diary

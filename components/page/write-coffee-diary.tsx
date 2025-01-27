@@ -59,7 +59,7 @@ export function WriteCoffeeDiary() {
                     with the memories and feelings associated with your coffee
                     adventures.
                 </div>
-                <div className="rounded-xl bg-serenade-500 p-8 shadow-xl shadow-coffee-brown">
+                <div className="rounded-xl bg-serenade-500 p-4 py-8 shadow-xl shadow-coffee-brown lg:p-8">
                     <DiaryInput
                         inputTitle="Your Name"
                         setInputValue={setName}
