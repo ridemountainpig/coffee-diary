@@ -64,14 +64,14 @@ export function WriteCoffeeDiary() {
                         inputTitle="Your Name"
                         setInputValue={setName}
                     ></DiaryInput>
-                    <div className="flex h-fit flex-wrap items-center py-4">
-                        <span className="ml-2 font-tilt-neon text-xl font-black text-serenade-950 md:text-2xl">
+                    <div className="py-4">
+                        <span className="font-tilt-neon text-xl font-black text-serenade-950 md:text-2xl">
                             Date :
                         </span>
                         <input
                             type="date"
                             onChange={(e) => setDate(e.target.value)}
-                            className="ml-2 mt-2 w-full border-b-4 border-dashed border-serenade-950 bg-serenade-500 p-0.5 font-tilt-neon text-xl text-serenade-950 md:text-2xl"
+                            className="mt-2 w-full border-b-4 border-dashed border-serenade-950 bg-serenade-500 p-0.5 font-tilt-neon text-xl text-serenade-950 md:text-2xl"
                         />
                     </div>
                     <DiaryInput
@@ -98,7 +98,7 @@ export function WriteCoffeeDiary() {
                         </button>
                     </div>
                     <div
-                        className={`flex w-full justify-center gap-x-2 pt-6 ${alert ? "" : "hidden"}`}
+                        className={`flex w-full justify-center gap-x-2 pt-6 text-center ${alert ? "" : "hidden"}`}
                     >
                         <FileWarning className="text-serenade-950" />
                         <span className="text-md font-tilt-neon font-black tracking-widest text-serenade-950 sm:text-xl">
