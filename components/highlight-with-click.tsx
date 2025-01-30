@@ -13,7 +13,7 @@ export function HighlightWithClick({
         <>
             <div className="inline-block">
                 <div
-                    className={`flex h-fit items-center text-serenade-950 underline decoration-serenade-950 decoration-dashed decoration-4 ${underlineOffset}`}
+                    className={`text-serenade-950 decoration-serenade-950 flex h-fit items-center underline decoration-dashed decoration-4 ${underlineOffset}`}
                 >
                     {text}
                     <MousePointerClick color="#472713" />

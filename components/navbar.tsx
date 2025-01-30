@@ -28,7 +28,7 @@ export function Navbar({ text }: NavbarProps) {
                 />
             </a>
             <div className="flex items-center text-center">
-                <span className="-mt-4 font-kodchasan text-xl font-black tracking-widest text-coffee-black sm:text-2xl md:-mt-0 md:text-3xl lg:text-4xl">
+                <span className="font-kodchasan text-coffee-black -mt-4 text-xl font-black tracking-widest sm:text-2xl md:-mt-0 md:text-3xl lg:text-4xl">
                     {text}
                 </span>
             </div>

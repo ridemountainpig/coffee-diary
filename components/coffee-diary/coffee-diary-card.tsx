@@ -33,13 +33,13 @@ export function CoffeeDiaryCard({
     return (
         <>
             <div
-                className={`my-2 h-fit w-full border-dashed border-serenade-800 py-4 ${
+                className={`border-serenade-800 my-2 h-fit w-full border-dashed py-4 ${
                     coffeeDay == 1 ? "" : "border-b-4"
                 }`}
             >
                 <div className="w-full justify-between lg:flex">
                     <div className="h-fit items-center lg:flex">
-                        <div className="font-tilt-neon text-xl font-semibold tracking-widest text-serenade-950">
+                        <div className="font-tilt-neon text-serenade-950 text-xl font-semibold tracking-widest">
                             {dateString}
                         </div>
                         <div className="flex h-fit items-center">
@@ -50,7 +50,7 @@ export function CoffeeDiaryCard({
                                 height={24}
                                 className="-ml-1 lg:ml-2"
                             />
-                            <div className="font-tilt-neon text-xl font-semibold tracking-widest text-coffee-brown">
+                            <div className="font-tilt-neon text-coffee-brown text-xl font-semibold tracking-widest">
                                 {beanType}
                             </div>
                             <Map
@@ -59,7 +59,7 @@ export function CoffeeDiaryCard({
                                 strokeWidth="3"
                                 className="ml-2"
                             />
-                            <div className="ml-1 font-tilt-neon text-xl font-semibold tracking-widest text-coffee-brown">
+                            <div className="font-tilt-neon text-coffee-brown ml-1 text-xl font-semibold tracking-widest">
                                 {origin}
                             </div>
                         </div>
@@ -71,12 +71,12 @@ export function CoffeeDiaryCard({
                             strokeWidth={3}
                             className="mr-1"
                         />
-                        <div className="ml-1 font-tilt-neon text-xl font-semibold tracking-widest text-coffee-brown">
+                        <div className="font-tilt-neon text-coffee-brown ml-1 text-xl font-semibold tracking-widest">
                             {coffeeDay} Coffee Days
                         </div>
                     </div>
                 </div>
-                <div className="mt-4 font-tilt-neon text-xl font-bold tracking-widest text-[#967253]">
+                <div className="font-tilt-neon mt-4 text-xl font-bold tracking-widest text-[#967253]">
                     <span className="text-serenade-950">Flavor: </span>
                     {flavor}
                 </div>

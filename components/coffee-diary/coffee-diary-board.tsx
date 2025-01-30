@@ -88,7 +88,7 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                                 <Highlight text="coffee-diary.json"></Highlight>{" "}
                                 file with this GitHub username.
                             </div>
-                            <div className="mt-4 font-tilt-neon text-xl font-black tracking-widest text-[#967253]">
+                            <div className="font-tilt-neon mt-4 text-xl font-black tracking-widest text-[#967253]">
                                 please check the{" "}
                                 <a
                                     href="https://coffee-diary.com/"
@@ -109,7 +109,7 @@ export function CoffeeDiaryBoard({ name }: CoffeeDiaryBoardProps) {
                 {isJsonError == true && (
                     <div className="flex justify-center text-center">
                         <div className="py-6">
-                            <div className="mt-4 font-tilt-neon text-xl font-black tracking-widest text-red-700">
+                            <div className="font-tilt-neon mt-4 text-xl font-black tracking-widest text-red-700">
                                 coffee-diary.json syntax error please check your
                                 json file.
                             </div>

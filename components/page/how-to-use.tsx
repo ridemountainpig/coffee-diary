@@ -55,15 +55,15 @@ export function HowToUse() {
                 transition={{ duration: 1, delay: 0.1 }}
                 viewport={{ once: true }}
             >
-                <div className="lg:mx-30 mx-5 mt-2 sm:mx-20 2xl:mx-52">
+                <div className="mx-5 mt-2 sm:mx-20 lg:mx-30 2xl:mx-52">
                     <AreaTitle title="How to use"></AreaTitle>
-                    <div className="pb-4 font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl">
+                    <div className="font-tilt-neon text-serenade-800 pb-4 text-xl leading-relaxed font-black tracking-widest sm:text-2xl">
                         Add a <Highlight text="coffee-diary.json"></Highlight>{" "}
                         file to your <Highlight text="Github"></Highlight>{" "}
                         special repository root.
                     </div>
                     <AreaContent content="(the repo with your username)."></AreaContent>
-                    <div className="py-4 font-tilt-neon text-xl font-black tracking-widest text-serenade-800 sm:text-2xl">
+                    <div className="font-tilt-neon text-serenade-800 py-4 text-xl font-black tracking-widest sm:text-2xl">
                         <a
                             href="https://github.com/ridemountainpig/coffee-diary/blob/main/coffee-diary.json"
                             target="_blank"
@@ -77,20 +77,20 @@ export function HowToUse() {
                         </a>
                     </div>
                 </div>
-                <div className="lg:mx-30 mx-5 h-fit sm:mx-20 2xl:mx-52">
-                    <div className="flex h-fit items-center gap-x-2 text-coffee-black">
+                <div className="mx-5 h-fit sm:mx-20 lg:mx-30 2xl:mx-52">
+                    <div className="text-coffee-black flex h-fit items-center gap-x-2">
                         <FileJson2 />
-                        <div className="py-4 font-tilt-neon text-lg font-black tracking-widest">
+                        <div className="font-tilt-neon py-4 text-lg font-black tracking-widest">
                             coffee-diary.json
                         </div>
                     </div>
                 </div>
-                <div className="lg:mx-30 mx-5 grid h-fit grid-cols-2 gap-x-10 pb-10 sm:mx-20 2xl:mx-52">
+                <div className="mx-5 grid h-fit grid-cols-2 gap-x-10 pb-10 sm:mx-20 lg:mx-30 2xl:mx-52">
                     <div className="col-span-2 h-full xl:col-span-1">
                         <CoffeeDiaryJson></CoffeeDiaryJson>
                     </div>
                     <div className="col-span-2 mt-4 flex h-full items-center xl:col-span-1 xl:mt-0">
-                        <span className="font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl lg:leading-loose">
+                        <span className="font-tilt-neon text-serenade-800 text-xl leading-relaxed font-black tracking-widest sm:text-2xl lg:leading-loose">
                             In this JSON configuration, each coffee diary entry
                             is encapsulated as an object keyed by the date in a{" "}
                             <Highlight text="year-month-day"></Highlight>{" "}
@@ -104,8 +104,8 @@ export function HowToUse() {
                         </span>
                     </div>
                 </div>
-                <div className="lg:mx-30 mx-5 pb-10 sm:mx-20 2xl:mx-52">
-                    <div className="pb-10 font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl">
+                <div className="mx-5 pb-10 sm:mx-20 lg:mx-30 2xl:mx-52">
+                    <div className="font-tilt-neon text-serenade-800 pb-10 text-xl leading-relaxed font-black tracking-widest sm:text-2xl">
                         After setting up the{" "}
                         <Highlight text="coffee-diary.json"></Highlight> , enter
                         your <Highlight text="Github username"></Highlight> to
@@ -115,17 +115,17 @@ export function HowToUse() {
                     <div className="pb-10">
                         <div className="flex h-fit flex-wrap items-center">
                             <PencilLine color="#472713" size={28} />
-                            <span className="ml-2 font-tilt-neon text-xl font-black text-serenade-950 md:text-2xl">
+                            <span className="font-tilt-neon text-serenade-950 ml-2 text-xl font-black md:text-2xl">
                                 Github Username :
                             </span>
                             <input
                                 type="text"
                                 onChange={handleGithubNameChange}
-                                className="ml-2 mt-2 border-b-4 border-dashed border-serenade-950 bg-coffee-white p-0.5 font-tilt-neon text-xl text-serenade-950 md:text-2xl"
+                                className="border-serenade-950 bg-coffee-white font-tilt-neon text-serenade-950 mt-2 ml-2 border-b-4 border-dashed p-0.5 text-xl md:text-2xl"
                             />
                             {githubName ? (
                                 <button
-                                    className="ml-2 mt-2"
+                                    className="mt-2 ml-2"
                                     onClick={handleGithubNameBtnClick}
                                 >
                                     <ArrowRightCircle
@@ -138,7 +138,7 @@ export function HowToUse() {
                             )}
                         </div>
                         {coffeeDiaryState ? (
-                            <div className="mt-4 font-tilt-neon text-xl font-black tracking-widest text-red-700">
+                            <div className="font-tilt-neon mt-4 text-xl font-black tracking-widest text-red-700">
                                 cannot find the{" "}
                                 <Highlight text="coffee-diary.json"></Highlight>{" "}
                                 file with this GitHub username.
@@ -147,7 +147,7 @@ export function HowToUse() {
                             ""
                         )}
                     </div>
-                    <div className="grid w-full grid-cols-2 gap-x-10 rounded-xl bg-serenade-500 p-4">
+                    <div className="bg-serenade-500 grid w-full grid-cols-2 gap-x-10 rounded-xl p-4">
                         <div className="order-2 col-span-2 flex h-full items-center p-8 lg:order-1 lg:col-span-1">
                             <div className="h-fit w-full">
                                 {coffeeDiaryPage ? (
@@ -156,7 +156,7 @@ export function HowToUse() {
                                             href={`https://coffee-diary.com/${githubName}`}
                                             title={`${githubName}'s coffee diary`}
                                             target="_blank"
-                                            className="text-center font-tilt-neon text-xl font-black tracking-wider text-serenade-800 sm:text-2xl"
+                                            className="font-tilt-neon text-serenade-800 text-center text-xl font-black tracking-wider sm:text-2xl"
                                         >
                                             <HighlightWithClick
                                                 text={`Look ${githubName} Coffee Diary`}
@@ -170,7 +170,7 @@ export function HowToUse() {
                                     <></>
                                 )}
                                 <div className="text-center">
-                                    <span className="font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl lg:leading-loose">
+                                    <span className="font-tilt-neon text-serenade-800 text-xl leading-relaxed font-black tracking-widest sm:text-2xl lg:leading-loose">
                                         Coffee Diary SVG can be seamlessly
                                         integrated into your GitHub README with{" "}
                                         <a

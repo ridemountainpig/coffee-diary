@@ -48,11 +48,11 @@ export const CoffeeDiaryJson = () => {
     return (
         <>
             <Tilt transitionSpeed={2000} tiltMaxAngleX={5} tiltMaxAngleY={5}>
-                <div className="rounded-xl bg-serenade-500 p-2 duration-700 hover:scale-[1.02] hover:bg-serenade-600 hover:bg-opacity-70 sm:p-4 2xl:p-10">
-                    <pre className="hidden py-4 font-tilt-neon text-lg font-black tracking-widest text-serenade-800 sm:block">
+                <div className="bg-serenade-500 hover:bg-serenade-600 hover:bg-opacity-70 rounded-xl p-2 duration-700 hover:scale-[1.02] sm:p-4 2xl:p-10">
+                    <pre className="font-tilt-neon text-serenade-800 hidden py-4 text-lg font-black tracking-widest sm:block">
                         {code}
                     </pre>
-                    <pre className="py-4 font-tilt-neon text-base font-black tracking-widest text-serenade-800 sm:hidden">
+                    <pre className="font-tilt-neon text-serenade-800 py-4 text-base font-black tracking-widest sm:hidden">
                         {code_xs}
                     </pre>
                 </div>

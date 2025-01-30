@@ -19,7 +19,7 @@ export async function generateMetadata({
             description: `See ${diaryData.name}'s COFFEE DIARY on COFFEE DIARY.`,
             images: [
                 {
-                    url: `https://coffee-diary.zeabur.app/api/og/${diaryData.name}`,
+                    url: `https://coffee-diary-fastapi.zeabur.app/og/${diaryData.name}`,
                     width: 1200,
                     height: 630,
                     alt: diaryData.name + "'s COFFEE DIARY",
@@ -32,7 +32,7 @@ export async function generateMetadata({
             description: `See ${diaryData.name}'s COFFEE DIARY on COFFEE DIARY.`,
             creator: "@ridemountainpig",
             images: [
-                `https://coffee-diary.zeabur.app/api/og/${diaryData.name}`,
+                `https://coffee-diary-fastapi.zeabur.app/og/${diaryData.name}`,
             ],
         },
     };
@@ -69,7 +69,7 @@ export default function DiaryPage({
     const diaryData = decodeData(params.encodedData);
 
     return (
-        <div className="h-fit bg-coffee-white">
+        <div className="bg-coffee-white h-fit">
             <Navbar text={`Coffee Diary`}></Navbar>
             <Diary
                 encodedData={params.encodedData}

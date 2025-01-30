@@ -15,7 +15,7 @@ export function DiaryContent({
 }: DiaryContentProps) {
     return (
         <>
-            <div className="mx-4 h-fit items-center border-b-4 border-coffee-alabaster p-2 pb-6 font-pacifico text-2xl leading-loose tracking-widest text-coffee-brown lg:h-14 lg:border-white lg:pb-0 lg:text-3xl lg:leading-loose">
+            <div className="border-coffee-alabaster font-pacifico text-coffee-brown mx-4 h-fit items-center border-b-4 p-2 pb-6 text-2xl leading-loose tracking-widest lg:h-14 lg:border-white lg:pb-0 lg:text-3xl lg:leading-loose">
                 <p className={`${padding} ${position}`}>
                     {content.split(" ").map((text, index) => {
                         return (

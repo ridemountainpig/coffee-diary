@@ -10,7 +10,7 @@ import DynamicDock from "dynamic-dock";
 export default function Home() {
     return (
         <>
-            <div className="h-fit bg-coffee-white">
+            <div className="bg-coffee-white h-fit">
                 <Navbar></Navbar>
                 <div className="flex h-fit justify-center">
                     <div className="block h-fit lg:hidden">
@@ -25,13 +25,13 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="flex w-full justify-center bg-coffee-white pb-10 pt-20">
+            <div className="bg-coffee-white flex w-full justify-center pt-20 pb-10">
                 <Diary></Diary>
             </div>
-            <div className="w-full bg-coffee-white">
+            <div className="bg-coffee-white w-full">
                 <WhatIsCoffeeDiary></WhatIsCoffeeDiary>
             </div>
-            <div className="flex w-full justify-center bg-coffee-white pb-16 pt-6">
+            <div className="bg-coffee-white flex w-full justify-center pt-6 pb-16">
                 <CoffeeMenu></CoffeeMenu>
             </div>
             <Footer></Footer>

@@ -19,7 +19,7 @@ export async function generateMetadata({
                 "See " + params.name + "'s COFFEE DIARY on COFFEE DIARY.",
             images: [
                 {
-                    url: "https://coffee-diary.com/coffee-diary.png",
+                    url: `https://coffee-diary-fastapi.zeabur.app/og/${params.name}`,
                     width: 1200,
                     height: 630,
                     alt: params.name + "'s COFFEE DIARY",
@@ -32,7 +32,9 @@ export async function generateMetadata({
             description:
                 "See " + params.name + "'s COFFEE DIARY on COFFEE DIARY.",
             creator: "@ridemountainpig",
-            images: ["https://coffee-diary.com/coffee-diary.png"],
+            images: [
+                `https://coffee-diary-fastapi.zeabur.app/og/${params.name}`,
+            ],
         },
     };
 }
@@ -40,10 +42,10 @@ export async function generateMetadata({
 export default function UserPage({ params }: { params: { name: string } }) {
     return (
         <>
-            <div className="h-fit bg-coffee-white">
+            <div className="bg-coffee-white h-fit">
                 <Navbar text={`Coffee Diary`}></Navbar>
                 <div className="flex h-[55rem] w-full items-center justify-center">
-                    <div className="h-[92%] w-[90%] rounded-2xl bg-serenade-500 py-6">
+                    <div className="bg-serenade-500 h-[92%] w-[90%] rounded-2xl py-6">
                         <div className="flex w-full justify-center">
                             <CoffeeDiaryName
                                 name={params.name}

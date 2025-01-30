@@ -9,7 +9,7 @@ interface CoffeeDiaryNameProps {
 export function CoffeeDiaryName({ name }: CoffeeDiaryNameProps) {
     return (
         <>
-            <span className="p-4 text-center font-pacifico text-xl tracking-widest text-coffee-brown lg:text-2xl">
+            <span className="font-pacifico text-coffee-brown p-4 text-center text-xl tracking-widest lg:text-2xl">
                 <motion.span
                     className="inline-block pr-1.5"
                     initial={{ opacity: 0 }}

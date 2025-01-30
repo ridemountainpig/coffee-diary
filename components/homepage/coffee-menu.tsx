@@ -9,14 +9,14 @@ import { MenuLink } from "@/components/coffee-menu/menu-link";
 export function CoffeeMenu() {
     return (
         <motion.div
-            className="w-[90%] rounded-2xl bg-serenade-500 p-4 shadow-xl shadow-coffee-brown sm:w-[78%] md:w-[85%] xl:p-6 2xl:w-[80%]"
+            className="bg-serenade-500 shadow-coffee-brown w-[90%] rounded-2xl p-4 shadow-xl sm:w-[78%] md:w-[85%] xl:p-6 2xl:w-[80%]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
             viewport={{ once: true }}
         >
             <div className="flex w-full justify-center">
-                <span className="font-kodchasan text-3xl font-black tracking-widest text-coffee-black lg:text-4xl">
+                <span className="font-kodchasan text-coffee-black text-3xl font-black tracking-widest lg:text-4xl">
                     COFFEE MENU
                 </span>
             </div>
@@ -48,9 +48,9 @@ export function CoffeeMenu() {
                             <ArrowBigUp
                                 size={28}
                                 strokeWidth={2}
-                                className="animate-bounce text-serenade-900"
+                                className="text-serenade-900 animate-bounce"
                             />
-                            <span className="text-md animate-bounce py-2 font-kodchasan font-black tracking-widest text-serenade-900">
+                            <span className="text-md font-kodchasan text-serenade-900 animate-bounce py-2 font-black tracking-widest">
                                 Create Coffee Diary
                             </span>
                             <img

@@ -50,28 +50,28 @@ export function WriteCoffeeDiary() {
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
         >
-            <div className="lg:mx-30 mx-5 mt-2 sm:mx-20 2xl:mx-52">
+            <div className="mx-5 mt-2 sm:mx-20 lg:mx-30 2xl:mx-52">
                 <AreaTitle title="Write Coffee Diary"></AreaTitle>
-                <div className="pb-10 font-tilt-neon text-xl font-black leading-relaxed tracking-widest text-serenade-800 sm:text-2xl">
+                <div className="font-tilt-neon text-serenade-800 pb-10 text-xl leading-relaxed font-black tracking-widest sm:text-2xl">
                     Take a moment to write in your coffee diary today, capturing
                     the essence of your unique coffee journey. Reflect on the
                     flavors, aromas, and experiences that each cup brings, along
                     with the memories and feelings associated with your coffee
                     adventures.
                 </div>
-                <div className="rounded-xl bg-serenade-500 p-4 py-8 shadow-xl shadow-coffee-brown lg:p-8">
+                <div className="bg-serenade-500 shadow-coffee-brown rounded-xl p-4 py-8 shadow-xl lg:p-8">
                     <DiaryInput
                         inputTitle="Your Name"
                         setInputValue={setName}
                     ></DiaryInput>
                     <div className="py-4">
-                        <span className="font-tilt-neon text-xl font-black text-serenade-950 md:text-2xl">
+                        <span className="font-tilt-neon text-serenade-950 text-xl font-black md:text-2xl">
                             Date :
                         </span>
                         <input
                             type="date"
                             onChange={(e) => setDate(e.target.value)}
-                            className="mt-2 w-full border-b-4 border-dashed border-serenade-950 bg-serenade-500 p-0.5 font-tilt-neon text-xl text-serenade-950 md:text-2xl"
+                            className="border-serenade-950 bg-serenade-500 font-tilt-neon text-serenade-950 mt-2 w-full border-b-4 border-dashed p-0.5 text-xl md:text-2xl"
                         />
                     </div>
                     <DiaryInput
@@ -88,10 +88,10 @@ export function WriteCoffeeDiary() {
                     ></DiaryInput>
                     <div className="flex w-full justify-center pt-6">
                         <button
-                            className="flex items-center gap-x-2 rounded-xl bg-serenade-950 bg-opacity-85 p-4"
+                            className="bg-serenade-950 bg-opacity-85 flex cursor-pointer items-center gap-x-2 rounded-xl p-4"
                             onClick={handleGenerateDiary}
                         >
-                            <span className="text-md font-tilt-neon font-black tracking-widest text-serenade-500 sm:text-xl">
+                            <span className="text-md font-tilt-neon text-serenade-500 font-black tracking-widest sm:text-xl">
                                 Generate Diary
                             </span>
                             <MousePointerClick className="text-serenade-500" />
@@ -101,7 +101,7 @@ export function WriteCoffeeDiary() {
                         className={`flex w-full justify-center gap-x-2 pt-6 text-center ${alert ? "" : "hidden"}`}
                     >
                         <FileWarning className="text-serenade-950" />
-                        <span className="text-md font-tilt-neon font-black tracking-widest text-serenade-950 sm:text-xl">
+                        <span className="text-md font-tilt-neon text-serenade-950 font-black tracking-widest sm:text-xl">
                             Please fill out the entire diary
                         </span>
                         <FileWarning className="text-serenade-950" />

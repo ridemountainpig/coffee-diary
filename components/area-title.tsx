@@ -5,7 +5,7 @@ interface AreaTitleProps {
 export function AreaTitle({ title }: AreaTitleProps) {
     return (
         <>
-            <div className="pb-10 font-kodchasan text-3xl font-black tracking-widest text-coffee-black lg:text-4xl">
+            <div className="font-kodchasan text-coffee-black pb-10 text-3xl font-black tracking-widest lg:text-4xl">
                 {title}
             </div>
         </>

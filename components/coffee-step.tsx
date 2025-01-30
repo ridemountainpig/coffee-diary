@@ -4,7 +4,7 @@ export function CoffeeStep() {
     return (
         <>
             <div className="flex gap-x-4">
-                <div className="mt-4 hover:text-serenade-800">
+                <div className="hover:text-serenade-800 mt-4">
                     <Image
                         src="/coffee-bean-brown.svg"
                         alt="coffee bean"

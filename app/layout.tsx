@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter, Pacifico, Kodchasan, Tilt_Neon } from "next/font/google";
+import { Pacifico, Kodchasan, Tilt_Neon } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { Rwdot } from "rwdot";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const pacifico = Pacifico({
     subsets: ["latin"],

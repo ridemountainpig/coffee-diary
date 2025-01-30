@@ -60,10 +60,10 @@ export function Diary({
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}
         >
-            <div className="lg:mx-30 mx-5 mt-2 sm:mx-10 2xl:mx-52">
-                <div className="rounded-xl bg-serenade-500 p-4 py-8 shadow-xl shadow-coffee-brown lg:p-8">
+            <div className="mx-5 mt-2 sm:mx-10 lg:mx-30 2xl:mx-52">
+                <div className="bg-serenade-500 shadow-coffee-brown rounded-xl p-4 py-8 shadow-xl lg:p-8">
                     <div className="flex w-full justify-center pb-2">
-                        <div className="text-center font-tilt-neon text-2xl font-black tracking-widest text-serenade-950 lg:text-3xl">
+                        <div className="font-tilt-neon text-serenade-950 text-center text-2xl font-black tracking-widest lg:text-3xl">
                             {name}&apos;s Coffee Diary
                         </div>
                     </div>
@@ -90,13 +90,13 @@ export function Diary({
                         </div>
                         <span>Origin: {origin}</span>
                     </div>
-                    <div className="flex h-fit w-full items-start gap-x-2 border-b-[3px] border-dashed border-serenade-950 bg-serenade-500 p-0.5 py-4 font-tilt-neon text-lg tracking-wider text-serenade-950 md:text-2xl">
+                    <div className="border-serenade-950 bg-serenade-500 font-tilt-neon text-serenade-950 flex h-fit w-full items-start gap-x-2 border-b-[3px] border-dashed p-0.5 py-4 text-lg tracking-wider md:text-2xl">
                         <div className="mt-1 w-6">
                             <Coffee />
                         </div>
                         <span>Flavor: {flavor}</span>
                     </div>
-                    <div className="flex w-full justify-center pb-2 pt-8">
+                    <div className="flex w-full justify-center pt-8 pb-2">
                         <div className="justify-center gap-x-8 md:flex">
                             <Tilt
                                 transitionSpeed={1000}
@@ -111,7 +111,7 @@ export function Diary({
                             </Tilt>
                             <div className="mt-4 flex justify-center gap-x-4 gap-y-4 md:mt-0 md:flex-col">
                                 <a
-                                    className="flex h-fit w-fit items-center rounded-full bg-serenade-600 px-4 py-2"
+                                    className="bg-serenade-600 flex h-fit w-fit items-center rounded-full px-4 py-2"
                                     href={`https://x.com/intent/post?text=Check%20out%20my%20Coffee%20Diary%20for%20${date.replaceAll("-", "/")}!%20%23CoffeeDiary&url=https://coffee-diary.com/diary/${encodedData}`}
                                 >
                                     <svg
@@ -122,19 +122,19 @@ export function Diary({
                                     >
                                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                                     </svg>
-                                    <span className="font-tilt-neon text-lg text-serenade-950 md:text-xl">
+                                    <span className="font-tilt-neon text-serenade-950 text-lg md:text-xl">
                                         Share
                                     </span>
                                 </a>
                                 <button
-                                    className="flex h-fit w-fit items-center rounded-full bg-serenade-600 px-4 py-2"
+                                    className="bg-serenade-600 flex h-fit w-fit items-center rounded-full px-4 py-2"
                                     onClick={handleDownloadImage}
                                 >
                                     <Download
-                                        className="mr-1 h-3 w-3 text-serenade-950 md:h-5 md:w-5"
+                                        className="text-serenade-950 mr-1 h-3 w-3 md:h-5 md:w-5"
                                         strokeWidth={2.5}
                                     />
-                                    <span className="font-tilt-neon text-lg text-serenade-950 md:text-xl">
+                                    <span className="font-tilt-neon text-serenade-950 text-lg md:text-xl">
                                         Save as Image
                                     </span>
                                 </button>

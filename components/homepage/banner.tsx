@@ -16,7 +16,7 @@ export function Banner() {
                     <h1 className="hidden">COFFEE DIARY</h1>
                     <h2 className="hidden">COFFEE</h2>
                     <h2 className="hidden">DIARY</h2>
-                    <div className="flex justify-center font-kodchasan text-6.5xl font-black tracking-widest text-coffee-black sm:text-7xl md:pb-4 md:text-8xl lg:pb-0">
+                    <div className="font-kodchasan text-6.5xl text-coffee-black flex justify-center font-black tracking-widest sm:text-7xl md:pb-4 md:text-8xl lg:pb-0">
                         <span>C</span>
                         <Image
                             className="hidden pr-2 md:block"
@@ -34,17 +34,17 @@ export function Banner() {
                         />
                         <span>FFEE</span>
                     </div>
-                    <span className="font-kodchasan text-6.5xl font-black tracking-widest text-coffee-black sm:text-7xl md:text-8xl">
+                    <span className="font-kodchasan text-6.5xl text-coffee-black font-black tracking-widest sm:text-7xl md:text-8xl">
                         DIARY
                     </span>
                 </motion.div>
                 <motion.div
-                    className="absolute -left-20 -top-14 -z-10"
+                    className="absolute -top-14 -left-20 -z-10"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 1 }}
                 >
-                    <div className="rounded-full bg-serenade-900 opacity-30 blur-3xl md:h-96 md:w-96"></div>
+                    <div className="bg-serenade-900 rounded-full opacity-30 blur-3xl md:h-96 md:w-96"></div>
                 </motion.div>
             </div>
         </>
