@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { MousePointerClick, FileWarning } from "lucide-react";
 import { AreaTitle } from "@/components/area-title";
@@ -13,6 +14,8 @@ export function WriteCoffeeDiary() {
     const [origin, setOrigin] = useState("");
     const [flavor, setFlavor] = useState("");
     const [alert, setAlert] = useState(false);
+
+    const router = useRouter();
 
     const handleGenerateDiary = () => {
         if (
@@ -36,10 +39,13 @@ export function WriteCoffeeDiary() {
         };
 
         const diaryData = JSON.stringify(diaryDataObj);
+        const encodedData = Buffer.from(diaryData, "utf-8")
+            .toString("base64")
+            .replace(/\+/g, "-")
+            .replace(/\//g, "_")
+            .replace(/=+$/, "");
 
-        const encodedData = Buffer.from(diaryData).toString("base64");
-
-        window.location.href = `/diary/${encodedData}`;
+        router.push(`/diary/${encodedData}`);
     };
 
     return (

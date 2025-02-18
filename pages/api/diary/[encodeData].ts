@@ -28,7 +28,7 @@ function decodeData(encodedData: string): {
         const decodedString = Buffer.from(encodedData, "base64").toString(
             "utf-8",
         );
-        return JSON.parse(`{${decodedString.split("{")[1].split("}")[0]}}`);
+        return JSON.parse(decodedString);
     } catch (error) {
         console.error("Failed to decode data:", error);
         return {

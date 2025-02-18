@@ -46,10 +46,11 @@ function decodeData(encodedData: string): {
     flavor: string;
 } {
     try {
-        const decodedString = Buffer.from(encodedData, "base64").toString(
+        const base64String = encodedData.replace(/-/g, "+").replace(/_/g, "/");
+        const decodedString = Buffer.from(base64String, "base64").toString(
             "utf-8",
         );
-        return JSON.parse(`{${decodedString.split("{")[1].split("}")[0]}}`);
+        return JSON.parse(decodedString);
     } catch (error) {
         return {
             name: "No Name",
