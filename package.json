@@ -22,7 +22,7 @@
         "framer-motion": "^12.7.2",
         "html-to-image": "^1.11.11",
         "lucide-react": "^0.522.0",
-        "next": "14.2.26",
+        "next": "15.3.4",
         "react": "^18",
         "react-dom": "^18",
         "react-parallax-tilt": "^1.7.212",
