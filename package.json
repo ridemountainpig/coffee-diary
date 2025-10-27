@@ -21,7 +21,7 @@
         "dynamic-dock": "^1.0.0",
         "framer-motion": "^12.7.2",
         "html-to-image": "^1.11.11",
-        "lucide-react": "^0.522.0",
+        "lucide-react": "^0.548.0",
         "next": "14.2.26",
         "react": "^18",
         "react-dom": "^18",
