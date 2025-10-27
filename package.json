@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@next/third-parties": "^15.3.3",
-        "@radix-ui/react-dialog": "^1.1.7",
+        "@radix-ui/react-dialog": "^1.1.15",
         "@tailwindcss/cli": "^4.1.15",
         "@tailwindcss/line-clamp": "^0.4.4",
         "@vercel/analytics": "^1.5.0",
