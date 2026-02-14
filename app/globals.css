@@ -1,9 +1,8 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&display=swap")
 layer(utilities);
 @import url("https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap")
 layer(utilities);
+@import "tailwindcss";
 
 @theme {
     /* Custom Colors */
@@ -78,6 +77,7 @@ layer(utilities);
 }
 
 .font-mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
 }

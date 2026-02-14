@@ -52,7 +52,6 @@ Coffee Diary github action marketplace link: [Coffee Diary Github Action](https:
 
 1. Add a `coffee-diary.yml` file in your repository's `.github/workflows/` path.
 2. Configure `coffee-diary.yml` with the following format:
-
     - **Username**: Change `GITHUB_USERNAME` to your github username.
 
     - **Target Branch**: Change `BRANCH_NAME` to the branch you want to put Coffee Diary.
