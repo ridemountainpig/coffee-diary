@@ -6,62 +6,62 @@ import { CoffeeDiaryName } from "@/components/coffee-diary/coffee-diary-name";
 export async function generateMetadata({
     params,
 }: {
-    params: { name: string };
+    params: Promise<{ name: string }>;
 }) {
+    const { name } = await params;
     return {
-        title: params.name + " | COFFEE DIARY",
-        description: params.name + "'s COFFEE DIARY.",
+        title: name + " | COFFEE DIARY",
+        description: name + "'s COFFEE DIARY.",
         openGraph: {
             type: "website",
             url: "https://coffee-diary.com/",
-            title: params.name + "'s COFFEE DIARY",
-            description:
-                "See " + params.name + "'s COFFEE DIARY on COFFEE DIARY.",
+            title: name + "'s COFFEE DIARY",
+            description: "See " + name + "'s COFFEE DIARY on COFFEE DIARY.",
             images: [
                 {
-                    url: `https://coffee-diary-fastapi.zeabur.app/og/${params.name}`,
+                    url: `https://coffee-diary-fastapi.zeabur.app/og/${name}`,
                     width: 1200,
                     height: 630,
-                    alt: params.name + "'s COFFEE DIARY",
+                    alt: name + "'s COFFEE DIARY",
                 },
             ],
         },
         twitter: {
             card: "summary_large_image",
-            title: params.name + "'s COFFEE DIARY",
-            description:
-                "See " + params.name + "'s COFFEE DIARY on COFFEE DIARY.",
+            title: name + "'s COFFEE DIARY",
+            description: "See " + name + "'s COFFEE DIARY on COFFEE DIARY.",
             creator: "@ridemountainpig",
-            images: [
-                `https://coffee-diary-fastapi.zeabur.app/og/${params.name}`,
-            ],
+            images: [`https://coffee-diary-fastapi.zeabur.app/og/${name}`],
         },
     };
 }
 
-export default function UserPage({ params }: { params: { name: string } }) {
+export default async function UserPage({
+    params,
+}: {
+    params: Promise<{ name: string }>;
+}) {
+    const { name } = await params;
     return (
         <>
             <div className="bg-coffee-white h-fit">
                 <Navbar text={`Coffee Diary`}></Navbar>
-                <div className="flex h-[55rem] w-full items-center justify-center">
+                <div className="flex h-220 w-full items-center justify-center">
                     <div className="bg-serenade-500 h-[92%] w-[90%] rounded-2xl py-6">
                         <div className="flex w-full justify-center">
-                            <CoffeeDiaryName
-                                name={params.name}
-                            ></CoffeeDiaryName>
+                            <CoffeeDiaryName name={name}></CoffeeDiaryName>
                         </div>
                         <div className="flex h-full w-full justify-center">
                             <div className="no-scrollbar h-[90%] w-[90%] overflow-y-auto">
                                 <CoffeeDiaryBoard
-                                    name={params.name}
+                                    name={name}
                                 ></CoffeeDiaryBoard>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer name={params.name}></Footer>
+            <Footer name={name}></Footer>
         </>
     );
 }

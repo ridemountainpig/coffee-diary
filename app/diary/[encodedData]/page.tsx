@@ -5,9 +5,10 @@ import { Diary } from "@/components/page/diary";
 export async function generateMetadata({
     params,
 }: {
-    params: { encodedData: string };
+    params: Promise<{ encodedData: string }>;
 }) {
-    const diaryData = decodeData(params.encodedData);
+    const { encodedData } = await params;
+    const diaryData = decodeData(encodedData);
 
     return {
         title: diaryData.name + " | COFFEE DIARY",
@@ -62,18 +63,19 @@ function decodeData(encodedData: string): {
     }
 }
 
-export default function DiaryPage({
+export default async function DiaryPage({
     params,
 }: {
-    params: { encodedData: string };
+    params: Promise<{ encodedData: string }>;
 }) {
-    const diaryData = decodeData(params.encodedData);
+    const { encodedData } = await params;
+    const diaryData = decodeData(encodedData);
 
     return (
         <div className="bg-coffee-white h-fit">
             <Navbar text={`Coffee Diary`}></Navbar>
             <Diary
-                encodedData={params.encodedData}
+                encodedData={encodedData}
                 name={diaryData.name}
                 date={diaryData.date}
                 beanType={diaryData.beanType}

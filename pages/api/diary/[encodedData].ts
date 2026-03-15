@@ -11,10 +11,12 @@ type DiaryData = {
     flavor: string;
 };
 
+const SVG_FONT_STYLES = `@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&amp;family=Gluten:wght@500&amp;display=swap");`;
+
 function getCoffeeDiaryCss() {
     const filePath = path.join(process.cwd(), "app", "coffee-diary.css");
     const cssContent = fs.readFileSync(filePath, "utf8");
-    return cssContent;
+    return SVG_FONT_STYLES + cssContent;
 }
 
 function decodeData(encodedData: string): {
@@ -25,7 +27,8 @@ function decodeData(encodedData: string): {
     flavor: string;
 } {
     try {
-        const decodedString = Buffer.from(encodedData, "base64").toString(
+        const base64String = encodedData.replace(/-/g, "+").replace(/_/g, "/");
+        const decodedString = Buffer.from(base64String, "base64").toString(
             "utf-8",
         );
         return JSON.parse(decodedString);
@@ -45,7 +48,13 @@ export default async function coffeeDiarySvg(
     req: NextApiRequest,
     res: NextApiResponse,
 ) {
-    const { encodeData } = req.query;
+    const encodedData = req.query.encodedData;
+    const encodedDataStr =
+        typeof encodedData === "string"
+            ? encodedData
+            : Array.isArray(encodedData)
+              ? encodedData[0]
+              : undefined;
 
     const css = getCoffeeDiaryCss();
 
@@ -62,10 +71,10 @@ export default async function coffeeDiarySvg(
                         </div>
                         <div class="text-3xl font-black font-kodchasan-svg text-coffee-black tracking-widest w-full text-center">COFFEE</div>
                         <div class="text-3xl font-black font-kodchasan-svg text-coffee-black tracking-widest w-full text-center">DIARY</div>
-                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest w-full text-center p-2"></div>
+                        <div class="text-xs font-bold font-kodchasan-svg text-coffee-black tracking-widest w-full text-center p-2"></div>
                         <div class="w-full h-8 flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
-                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest px-4">Day One: Journey of Java</div>
+                        <div class="text-xs font-bold font-kodchasan-svg text-coffee-black tracking-widest px-4">Day One: Journey of Java</div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
                         </div>
                         <div class="w-full flex justify-center">
@@ -101,7 +110,12 @@ export default async function coffeeDiarySvg(
         `;
 
     try {
-        const diaryData = decodeData(encodeData as string) as DiaryData;
+        if (!encodedDataStr) {
+            res.setHeader("Content-Type", "image/svg+xml");
+            res.status(200).send(defaultSvgContent);
+            return;
+        }
+        const diaryData = decodeData(encodedDataStr) as DiaryData;
 
         const svgContent = `
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 510" width="320" height="510" class="rounded-2xl">
@@ -116,7 +130,7 @@ export default async function coffeeDiarySvg(
                         </div>
                         <div class="text-3xl font-black font-kodchasan-svg text-coffee-black tracking-widest w-full text-center">COFFEE</div>
                         <div class="text-3xl font-black font-kodchasan-svg text-coffee-black tracking-widest w-full text-center">DIARY</div>
-                        <div class="text-xs font-bold font-gluten text-coffee-black tracking-widest w-full text-center p-2">${diaryData.date.replace(/-/g, " . ")}</div>
+                        <div class="text-xs font-bold font-kodchasan-svg text-coffee-black tracking-widest w-full text-center p-2">${diaryData.date.replace(/-/g, " . ")}</div>
 
                         <div class="w-full flex justify-center py-2">
                         <div class="w-16">

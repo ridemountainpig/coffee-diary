@@ -26,6 +26,9 @@ export function CoffeeDiaryDialog({ name, date }: CoffeeDiaryDialogProps) {
                 </Dialog.Trigger>
                 <Dialog.Portal>
                     <Dialog.Content className="bg-serenade-600 fixed top-[50%] left-[50%] flex h-[530px] w-[340px] translate-x-[-50%] translate-y-[-50%] items-center justify-center rounded-2xl">
+                        <Dialog.Title className="sr-only">
+                            Diary Photo
+                        </Dialog.Title>
                         <div>
                             {isLoading == true ? (
                                 <div className="flex h-fit items-center">
