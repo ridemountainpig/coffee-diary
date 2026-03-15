@@ -3,6 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
+import { getEmbeddedFontStyles } from "@/lib/svg-fonts";
+
 type DiaryData = {
     name: string;
     date: string;
@@ -11,12 +13,10 @@ type DiaryData = {
     flavor: string;
 };
 
-const SVG_FONT_STYLES = `@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&amp;family=Gluten:wght@500&amp;display=swap");`;
-
-function getCoffeeDiaryCss() {
+function getCoffeeDiaryCss(fontStyles: string) {
     const filePath = path.join(process.cwd(), "app", "coffee-diary.css");
     const cssContent = fs.readFileSync(filePath, "utf8");
-    return SVG_FONT_STYLES + cssContent;
+    return fontStyles + cssContent;
 }
 
 function decodeData(encodedData: string): {
@@ -56,7 +56,14 @@ export default async function coffeeDiarySvg(
               ? encodedData[0]
               : undefined;
 
-    const css = getCoffeeDiaryCss();
+    let fontStyles: string;
+    try {
+        fontStyles = await getEmbeddedFontStyles();
+    } catch (error) {
+        console.error("Failed to fetch font styles:", error);
+        fontStyles = "";
+    }
+    const css = getCoffeeDiaryCss(fontStyles);
 
     const defaultSvgContent = `
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 510" width="320" height="510" class="rounded-2xl">
