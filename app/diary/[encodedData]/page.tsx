@@ -20,7 +20,7 @@ export async function generateMetadata({
             description: `See ${diaryData.name}'s COFFEE DIARY on COFFEE DIARY.`,
             images: [
                 {
-                    url: `https://coffee-diary-fastapi.zeabur.app/og/${diaryData.name}`,
+                    url: `https://coffee-diary-fastapi.yencheng.dev/og/${diaryData.name}`,
                     width: 1200,
                     height: 630,
                     alt: diaryData.name + "'s COFFEE DIARY",
@@ -33,7 +33,7 @@ export async function generateMetadata({
             description: `See ${diaryData.name}'s COFFEE DIARY on COFFEE DIARY.`,
             creator: "@ridemountainpig",
             images: [
-                `https://coffee-diary-fastapi.zeabur.app/og/${diaryData.name}`,
+                `https://coffee-diary-fastapi.yencheng.dev/og/${diaryData.name}`,
             ],
         },
     };
